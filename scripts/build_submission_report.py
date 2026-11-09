@@ -12,6 +12,7 @@ from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import mm
+from reportlab.graphics.shapes import Drawing, Rect, String, Line, Polygon
 from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table,
                                 TableStyle, PageBreak, KeepTogether)
 
@@ -88,22 +89,61 @@ def page(c, doc):
     c.drawRightString(w - 45, 30, f'{doc.page} / 5')
     c.restoreState()
 
+def disclosure_figure():
+    d = Drawing(502, 154)
+    stages = [
+        ('0 / INITIAL PROPOSAL', ['Coordinator sees disclosed facts.', 'Candidate routes are calculated.', 'Independent check runs.'], TEAL),
+        ('1 / PRIVATE UPDATE', ['Supplier sees reduced capacity.', 'Coordinator still has old facts.', 'Independent check BLOCKS plan.'], colors.HexColor('#B74132')),
+        ('2 / FORMAL DISCLOSURE', ['Update reaches the coordinator.', 'Plan is recalculated.', 'Operational constraints checked.'], TEAL),
+    ]
+    for i, (title, lines, accent) in enumerate(stages):
+        x = i * 174
+        d.add(Rect(x, 47, 154, 101, rx=5, fillColor=PALE, strokeColor=accent, strokeWidth=.7))
+        d.add(Rect(x, 122, 154, 26, fillColor=accent, strokeColor=None))
+        d.add(String(x+8, 132, title, fontName='Helvetica-Bold', fontSize=7.5, fillColor=WHITE))
+        for j, line in enumerate(lines):
+            d.add(String(x+8, 106-j*17, line, fontName='Helvetica', fontSize=7.2, fillColor=INK))
+        if i < 2:
+            d.add(Line(x+157, 94, x+170, 94, strokeColor=GREY, strokeWidth=1.2))
+            d.add(Polygon([x+170,94,x+165,97,x+165,91], fillColor=GREY, strokeColor=None))
+    d.add(Rect(0, 6, 502, 29, rx=4, fillColor=NAVY, strokeColor=None))
+    d.add(String(251, 17, 'ALL STAGES: NO AUTOMATED TRANSFER AUTHORIZATION', textAnchor='middle',
+                 fontName='Helvetica-Bold', fontSize=9, fillColor=WHITE))
+    return d
+
+
+def benchmark_figure():
+    d = Drawing(502, 175)
+    methods = [('local_only', 'No coordination'), ('greedy', 'Greedy'), ('optimized', 'Optimizer')]
+    for offset, key, title in [(0, 'mean_unmet_units', 'Mean unmet packs'),
+                                (258, 'mean_priority_weighted_unmet', 'Priority-weighted unmet')]:
+        d.add(String(offset, 158, title, fontName='Helvetica-Bold', fontSize=10, fillColor=NAVY))
+        maximum = max(benchmark['stats'][m][key] for m, _ in methods)
+        for i, (method, label) in enumerate(methods):
+            y = 120-i*37
+            value = benchmark['stats'][method][key]
+            d.add(String(offset, y+14, label, fontName='Helvetica', fontSize=8, fillColor=INK))
+            d.add(Rect(offset, y, value/maximum*180, 9, fillColor=TEAL if method == 'optimized' else colors.HexColor('#A6B8C4'), strokeColor=None))
+            d.add(String(offset+187, y, f'{value:.2f}', fontName='Helvetica-Bold', fontSize=8, fillColor=INK))
+        d.add(Line(offset, 38, offset+180, 38, strokeColor=GREY, strokeWidth=.5))
+        d.add(String(offset, 26, '0', fontName='Helvetica', fontSize=7, fillColor=GREY))
+    d.add(String(0, 7, '30 synthetic cases | seed 2026 | lower is better | bars start at zero; panel scales differ',
+                 fontName='Helvetica', fontSize=8, fillColor=GREY))
+    return d
+
+
 story = []
 # Page 1: problem, scope, why this prototype exists.
 story += [Spacer(1, 13), p('TECHNICAL REPORT  /  ITU UAE HACKATHON 2026', 'MRKicker'),
           p('MedRoute X', 'MRHero'),
           p('Evidence-grounded multi-agent coordination for synthetic medicine continuity', 'MRSub'),
-          box('<b>Release:</b> v0.10.0 (09 November 2026). <b>Submission:</b> draft only; team registration, identity and GitHub URL must be completed by the entrant. <b>System:</b> offline deterministic ten-role prototype; optional live LLM adapter has NOT been evaluated.'),
+          box('<b>Release:</b> v0.10.0 (09 November 2026). <b>Code:</b> <link href="https://github.com/cazantzevaol/MedRoute-X" color="#087C85">github.com/cazantzevaol/MedRoute-X</link>. <b>System:</b> offline deterministic ten-role prototype; optional live LLM adapter has NOT been evaluated. Final submission remains with the entrant.'),
           heading('1. Problem statement and intended use'),
           p('Shortages can create a coordination problem between healthcare facilities, stock holders, suppliers, logistics and regulators. Actors may receive conflicting or delayed information. MedRoute X studies whether bounded role-specific information, progressive disclosure, independent operational validation and source-linked policy context can improve <b>synthetic</b> decision processes.'),
           p('The prototype does <b>not</b> manage real inventory, process patient records, select treatment, authorize controlled-medicine movement, or implement UAE regulator decisions. Candidate transfers are simulations and always remain pending human authority.'),
           heading('2. Evaluation scenario: sequential incomplete information'),
-          table(['Step', 'Information released', 'Expected observable outcome'], [
-              ('0', 'Hospital A has simulated unmet demand; Hospital B has simulated surplus.', 'Optimizer proposes candidates; independent validation; no legal approval.'),
-              ('1', 'Supplier privately receives a reduced route-capacity update.', 'Coordinator remains stale; validator blocks unsafe candidate.'),
-              ('2', 'Supplier formally discloses the update to coordinator.', 'Plan recomputed within known capacity; approval still pending.'),
-              ('3', 'Controlled-medicine emergency case explicitly declared.', 'EDE-specific review pathway indicated; no automated authorization.'),
-          ], [39, 224, 239]),
+          disclosure_figure(),
+          p('Figure 1. The built-in three-state disclosure scenario. A separate controlled-medicine emergency case indicates an EDE-specific review pathway without granting a permit.', 'MRNote'),
           Spacer(1, 10),
           p('All identities, quantities, routes and urgency weights are invented. The workflow measures protocol correctness and optimization metrics, not patient outcomes.', 'MRNote'),
           PageBreak()]
@@ -153,11 +193,8 @@ s = benchmark['stats']
 story += [p('EVALUATION AND REPRODUCIBILITY', 'MRKicker'),
           p('8. Results on 30 seeded synthetic cases', 'MRH'),
           p('Reproducible offline benchmark (seed 2026). Lower values are better. The urgency weights are synthetic institutional preferences and must not be interpreted as medical triage or patient harm reduction.'),
-          table(['Method', 'Mean unmet packs', 'Priority-weighted unmet', 'Operational validity'], [
-              ('No coordination', f"{s['local_only']['mean_unmet_units']:.2f}", f"{s['local_only']['mean_priority_weighted_unmet']:.2f}", '100%'),
-              ('Greedy allocation', f"{s['greedy']['mean_unmet_units']:.2f}", f"{s['greedy']['mean_priority_weighted_unmet']:.2f}", '100%'),
-              ('Two-stage optimizer', f"{s['optimized']['mean_unmet_units']:.2f}", f"{s['optimized']['mean_priority_weighted_unmet']:.2f}", '100%'),
-          ], [138, 109, 141, 114]),
+          benchmark_figure(),
+          p('Figure 2. Reproduced from reports/benchmark_summary.json. All three methods passed operational validation in all 30 cases; this is not legal clearance.', 'MRNote'),
           Spacer(1, 10),
           box(f"<b>Measured outcome:</b> the optimizer reduces synthetic priority-weighted unmet demand by {benchmark['priority_weighted_reduction_vs_greedy_percent']:.2f}% versus greedy. <b>Total unmet packs are unchanged</b> versus greedy. No patient outcomes or real regulatory compliance were measured."),
           heading('9. Verification and auditability'),
@@ -178,8 +215,8 @@ story += [p('POLICY GAPS, REFERENCES AND NEXT STEPS', 'MRKicker'),
           table(['Item', 'Current status'], [
               ('Technical report', 'Five-page v0.10 draft with Y.3172/readiness/policy/evaluation mappings.'),
               ('Knowledge base', '14 source pointers, 18 curated claims; not a complete or legally validated corpus.'),
-              ('GitHub repository', 'Not uploaded or confirmed accessible to judges.'),
-              ('Team registration', 'Not verified; published registration window ended 5 Nov 2026.'),
+              ('GitHub repository', 'Public: github.com/cazantzevaol/MedRoute-X. GitHub automated checks passed.'),
+              ('Team registration', 'Participant reports completed registration; final entrant details remain to be confirmed.'),
               ('Submission', 'NOT submitted; official deadline 10 November 2026.'),
               ('Demo video', 'Optional at first round (up to 7 minutes), required if shortlisted; no recording claimed.'),
           ], [145, 357]),
@@ -192,7 +229,7 @@ story += [p('POLICY GAPS, REFERENCES AND NEXT STEPS', 'MRKicker'),
             '[R5] ITU: <link href="https://aiforgood.itu.int/event/ai-for-good-sandbox-hackathon-united-arab-emirates/" color="#087C85">hackathon requirements, FAQ and deadline</link>.<br/>'
             '[R6] ITU-T: <link href="https://www.itu.int/ITU-T/recommendations/rec.aspx?id=13894" color="#087C85">Y.3172</link>.<br/>'
             '[R7] EDE (24 Feb 2026): <link href="https://www.ede.gov.ae/en/w/emirates-drug-establishment-breaks-the-monopoly-of-medical-products-in-the-country" color="#087C85">supply-chain announcement</link>.', 'MRSmall'),
-          p('Team name, member identities and repository link must be supplied by the entrant. This document does not represent organizer acceptance or regulator endorsement.', 'MRNote')]
+          p('Team name and member identities must be confirmed by the entrant. This document does not represent organizer acceptance or regulator endorsement.', 'MRNote')]
 
 
 def build():
