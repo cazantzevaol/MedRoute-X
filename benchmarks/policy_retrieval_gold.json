@@ -1,0 +1,46 @@
+{
+  "name": "Sprint-1 small manual QA set for existing curated CLAIM SUMMARIES",
+  "warning": "Eight editorial queries are NOT representative national legal retrieval and do NOT evaluate statutory applicability.",
+  "cases": [
+    {
+      "id": "Q01",
+      "query": "EMA voluntary solidarity mechanism EU EEA shortages medicines",
+      "gold_claim_id": "C-EMA-001"
+    },
+    {
+      "id": "Q02",
+      "query": "WHO model essential medicines list updated September 2025",
+      "gold_claim_id": "C-WHO-001"
+    },
+    {
+      "id": "Q03",
+      "query": "ITU-T Y.3172 ML architecture pipeline orchestration future networks",
+      "gold_claim_id": "C-Y3172-001"
+    },
+    {
+      "id": "Q04",
+      "query": "EDE February 2026 more than one authorized commercial agent medicine products",
+      "gold_claim_id": "C-EDE-001"
+    },
+    {
+      "id": "Q05",
+      "query": "Federal Decree Law 45 of 2021 UAE personal data protection",
+      "gold_claim_id": "C-UAIPDPL-001"
+    },
+    {
+      "id": "Q06",
+      "query": "National Cyber Security Policy for Artificial Intelligence UAE critical decisions",
+      "gold_claim_id": "C-UAICYBER-001"
+    },
+    {
+      "id": "Q07",
+      "query": "EDE federal law pharmaceutical establishments pharmacists legislative index",
+      "gold_claim_id": "C-EDE-002"
+    },
+    {
+      "id": "Q08",
+      "query": "ITU challenge sequenced information disclosure institutional agents auditability",
+      "gold_claim_id": "C-ITU-002"
+    }
+  ]
+}

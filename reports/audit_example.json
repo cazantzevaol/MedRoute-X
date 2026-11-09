@@ -1,0 +1,385 @@
+{
+  "audit": [
+    {
+      "event_no": 1,
+      "step": 0,
+      "kind": "START",
+      "detail": "Scenario loaded; no medicine transferred.",
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "92f90bd84f7610751bf3f3f1367a4f949f5b92136b8ef5c1ca84f2795de0abf2"
+    },
+    {
+      "event_no": 2,
+      "step": 0,
+      "kind": "PLAN_PROPOSAL",
+      "detail": "candidate transfers=2; units=72; weighted unmet=0",
+      "prev_hash": "92f90bd84f7610751bf3f3f1367a4f949f5b92136b8ef5c1ca84f2795de0abf2",
+      "hash": "f4157f32496b65359bb6ed96d04aa195a0763cfc0c40dc947b5f8450135cb782"
+    },
+    {
+      "event_no": 3,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Coordinator: Proposal awaits independent operational validation and human authorization; only disclosures addressed to Coordinator change its route facts. | claims=C-ITU-002",
+      "prev_hash": "f4157f32496b65359bb6ed96d04aa195a0763cfc0c40dc947b5f8450135cb782",
+      "hash": "677ae1ef73ec0b0fd41e5fbbefb4ae44e1d0e6ae98ba223f3d8132ce98099ab5"
+    },
+    {
+      "event_no": 4,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Hospital: Modeled five-day shortage totals 72 synthetic packs. | claims=C-WHO-001",
+      "prev_hash": "677ae1ef73ec0b0fd41e5fbbefb4ae44e1d0e6ae98ba223f3d8132ce98099ab5",
+      "hash": "7fcf1094f867b8958f7903e9018d975e776c31afe422fe704a82a621315e2f64"
+    },
+    {
+      "event_no": 5,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Inventory: Donor spare after safety reserves: Hospital A=0, Hospital B=90, Hospital C=0 | claims=",
+      "prev_hash": "7fcf1094f867b8958f7903e9018d975e776c31afe422fe704a82a621315e2f64",
+      "hash": "47f25c110d796d43dec3bf2eee5ff73a568834f478103bb54c9805072b487752"
+    },
+    {
+      "event_no": 6,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Demand: Proposed plan leaves 0 generic packs unmet in this model. | claims=",
+      "prev_hash": "47f25c110d796d43dec3bf2eee5ff73a568834f478103bb54c9805072b487752",
+      "hash": "fdb6594a0963fbe36fa02cb82a4bf3ac6d6354c0bc04d30aac25b727fed9d87f"
+    },
+    {
+      "event_no": 7,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Supplier: No private supplier update received yet. | claims=C-EDE-001",
+      "prev_hash": "fdb6594a0963fbe36fa02cb82a4bf3ac6d6354c0bc04d30aac25b727fed9d87f",
+      "hash": "cc02921162b586d0370c704a53b8fd5af946701e2a89524e1a6fd165a6c85556"
+    },
+    {
+      "event_no": 8,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Logistics: 2 routes proposed; temperature and capacity checks are separate. | claims=",
+      "prev_hash": "cc02921162b586d0370c704a53b8fd5af946701e2a89524e1a6fd165a6c85556",
+      "hash": "f7235e9d04399f887939583cf08ad148ebb438368f36848641355a78f6b8e4df"
+    },
+    {
+      "event_no": 9,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Regulator: HUMAN_REVIEW_REQUIRED: Candidate movements are NOT approved. Qualified local authorities must verify product registration, facility authority, required permits and distribution conditions. High-level policy announcements do not authorize a transfer. | claims=C-EDE-002,C-EDE-001",
+      "prev_hash": "f7235e9d04399f887939583cf08ad148ebb438368f36848641355a78f6b8e4df",
+      "hash": "2ba2be62b841fc294711b39b0c52b2faab50e98be8855cf722fec3abfec1f168"
+    },
+    {
+      "event_no": 10,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "GlobalPolicy: EMA EU/EEA solidarity example is non-binding in the UAE. | claims=C-EMA-001",
+      "prev_hash": "2ba2be62b841fc294711b39b0c52b2faab50e98be8855cf722fec3abfec1f168",
+      "hash": "f932a6954e46ee2b0a02e1da0e9434ebf583bc68cb97c2abb45fc55f3b042f2f"
+    },
+    {
+      "event_no": 11,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Equity: Unmet modeled demand by facility: {'Hospital A': 0, 'Hospital B': 0, 'Hospital C': 0} | claims=",
+      "prev_hash": "f932a6954e46ee2b0a02e1da0e9434ebf583bc68cb97c2abb45fc55f3b042f2f",
+      "hash": "26e0b34d3492286d648c8e4972fd5588fcf8c519c1fe9cd5aa60f50d01f42f15"
+    },
+    {
+      "event_no": 12,
+      "step": 0,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Auditor: Audit requires independent validation, evidence traceability, and explicit human clearance. | claims=C-ITU-002",
+      "prev_hash": "26e0b34d3492286d648c8e4972fd5588fcf8c519c1fe9cd5aa60f50d01f42f15",
+      "hash": "d1267d5fba98f7206629e3097cdf5b6c449d4715ead204305ab785a043972dc1"
+    },
+    {
+      "event_no": 13,
+      "step": 0,
+      "kind": "INDEPENDENT_OPERATIONAL_CHECK",
+      "detail": "passes=True; issues=[]",
+      "prev_hash": "d1267d5fba98f7206629e3097cdf5b6c449d4715ead204305ab785a043972dc1",
+      "hash": "4556bba4c451dc35d984b4564789dc6c1e3fc1a7fcdbe762c1971fd37d1cfca3"
+    },
+    {
+      "event_no": 14,
+      "step": 0,
+      "kind": "LEGAL_GATE",
+      "detail": "status=HUMAN_REVIEW_REQUIRED; no autonomous permissions",
+      "prev_hash": "4556bba4c451dc35d984b4564789dc6c1e3fc1a7fcdbe762c1971fd37d1cfca3",
+      "hash": "2f733d2ade53b049852429c38898b3b58a015d95cdfe073f8345cd3885af86f4"
+    },
+    {
+      "event_no": 15,
+      "step": 0,
+      "kind": "POLICY_QUESTIONS",
+      "detail": "expert-review questions=1; confirmed legal gaps=0",
+      "prev_hash": "2f733d2ade53b049852429c38898b3b58a015d95cdfe073f8345cd3885af86f4",
+      "hash": "4666b9cafe8eacab5f774ce0b4e16b98335043c98590c8e1a72740771c746e28"
+    },
+    {
+      "event_no": 16,
+      "step": 1,
+      "kind": "INFORMATION_EVENT",
+      "detail": "Restricted institutional event (details withheld).",
+      "prev_hash": "4666b9cafe8eacab5f774ce0b4e16b98335043c98590c8e1a72740771c746e28",
+      "hash": "5f8bcd8e9a8bf0ccf1a3170f4b3296c1f7bca4fc54f33b0cd63f0ffe4b34b3db"
+    },
+    {
+      "event_no": 17,
+      "step": 1,
+      "kind": "INFORMATION_RECIPIENTS",
+      "detail": "Supplier",
+      "prev_hash": "5f8bcd8e9a8bf0ccf1a3170f4b3296c1f7bca4fc54f33b0cd63f0ffe4b34b3db",
+      "hash": "25702f79381b3ca0153e462ac93f70198df99f6fc25d48389dd25bb488b8a5ff"
+    },
+    {
+      "event_no": 18,
+      "step": 1,
+      "kind": "PLAN_PROPOSAL",
+      "detail": "candidate transfers=2; units=72; weighted unmet=0",
+      "prev_hash": "25702f79381b3ca0153e462ac93f70198df99f6fc25d48389dd25bb488b8a5ff",
+      "hash": "76c2a7c68bf6723aba70075e097eb63a06979726b3271deedeb65cf29f4490a0"
+    },
+    {
+      "event_no": 19,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Coordinator: Proposal awaits independent operational validation and human authorization; only disclosures addressed to Coordinator change its route facts. | claims=C-ITU-002",
+      "prev_hash": "76c2a7c68bf6723aba70075e097eb63a06979726b3271deedeb65cf29f4490a0",
+      "hash": "b8e7fbf83d04ab99acc70c0d7751a5ab2813583b43e76c101384087aa646173f"
+    },
+    {
+      "event_no": 20,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Hospital: Modeled five-day shortage totals 72 synthetic packs. | claims=C-WHO-001",
+      "prev_hash": "b8e7fbf83d04ab99acc70c0d7751a5ab2813583b43e76c101384087aa646173f",
+      "hash": "27959a90184941ebf185b038bb73711bc1609722aed1743e43ebadae58442c33"
+    },
+    {
+      "event_no": 21,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Inventory: Donor spare after safety reserves: Hospital A=0, Hospital B=90, Hospital C=0 | claims=",
+      "prev_hash": "27959a90184941ebf185b038bb73711bc1609722aed1743e43ebadae58442c33",
+      "hash": "7ce220bd63b08f8dfa6853e0156ed968c02b8e4ba099febfa89a48e311bc91d4"
+    },
+    {
+      "event_no": 22,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Demand: Proposed plan leaves 0 generic packs unmet in this model. | claims=",
+      "prev_hash": "7ce220bd63b08f8dfa6853e0156ed968c02b8e4ba099febfa89a48e311bc91d4",
+      "hash": "a86424b0b6bca07e2ddede5273470ad925882238fa1ba5a100937186252dce73"
+    },
+    {
+      "event_no": 23,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Supplier: Private supplier report received; other institutions may have stale data. | claims=C-EDE-001",
+      "prev_hash": "a86424b0b6bca07e2ddede5273470ad925882238fa1ba5a100937186252dce73",
+      "hash": "23eb01939eb5d9c86732ffa88d44e38783b3ab62babeba2f1984f214ce7991bd"
+    },
+    {
+      "event_no": 24,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Logistics: 2 routes proposed; temperature and capacity checks are separate. | claims=",
+      "prev_hash": "23eb01939eb5d9c86732ffa88d44e38783b3ab62babeba2f1984f214ce7991bd",
+      "hash": "1345e8366a537903d6aa5171277458c2982813b4f58f59f1ca11e57d1a02bb60"
+    },
+    {
+      "event_no": 25,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Regulator: HUMAN_REVIEW_REQUIRED: Candidate movements are NOT approved. Qualified local authorities must verify product registration, facility authority, required permits and distribution conditions. High-level policy announcements do not authorize a transfer. | claims=C-EDE-002,C-EDE-001",
+      "prev_hash": "1345e8366a537903d6aa5171277458c2982813b4f58f59f1ca11e57d1a02bb60",
+      "hash": "822cb3f5305170fef56d049e23e381982e3649d8e272009755c443b8bd49f560"
+    },
+    {
+      "event_no": 26,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "GlobalPolicy: EMA EU/EEA solidarity example is non-binding in the UAE. | claims=C-EMA-001",
+      "prev_hash": "822cb3f5305170fef56d049e23e381982e3649d8e272009755c443b8bd49f560",
+      "hash": "47c44b8a6f7296dd306aca03909b8af8532928ac550bc4b9586137a9cebe0c4a"
+    },
+    {
+      "event_no": 27,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Equity: Unmet modeled demand by facility: {'Hospital A': 0, 'Hospital B': 0, 'Hospital C': 0} | claims=",
+      "prev_hash": "47c44b8a6f7296dd306aca03909b8af8532928ac550bc4b9586137a9cebe0c4a",
+      "hash": "8c2546c7c0e650997155a5e1f5afe41fa355abf1153cab98021735a53e00a84b"
+    },
+    {
+      "event_no": 28,
+      "step": 1,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Auditor: Audit requires independent validation, evidence traceability, and explicit human clearance. | claims=C-ITU-002",
+      "prev_hash": "8c2546c7c0e650997155a5e1f5afe41fa355abf1153cab98021735a53e00a84b",
+      "hash": "51b1dcacb054e7cfb7b01e9837cf36a94623290a3e50aa593af6b11c25045271"
+    },
+    {
+      "event_no": 29,
+      "step": 1,
+      "kind": "INDEPENDENT_OPERATIONAL_CHECK",
+      "detail": "passes=False; issues=['Route capacity exceeded for B-A (stale information?)']",
+      "prev_hash": "51b1dcacb054e7cfb7b01e9837cf36a94623290a3e50aa593af6b11c25045271",
+      "hash": "9ef36e29d2a08e2b4beede4073092c49e8d4fe7b8eae6250d565653e0856581f"
+    },
+    {
+      "event_no": 30,
+      "step": 1,
+      "kind": "LEGAL_GATE",
+      "detail": "status=HUMAN_REVIEW_REQUIRED; no autonomous permissions",
+      "prev_hash": "9ef36e29d2a08e2b4beede4073092c49e8d4fe7b8eae6250d565653e0856581f",
+      "hash": "97e11ebbbca55846031db0d603608ec1048f3fcbed6fa2215b1a3c6dfdeda35f"
+    },
+    {
+      "event_no": 31,
+      "step": 1,
+      "kind": "POLICY_QUESTIONS",
+      "detail": "expert-review questions=3; confirmed legal gaps=0",
+      "prev_hash": "97e11ebbbca55846031db0d603608ec1048f3fcbed6fa2215b1a3c6dfdeda35f",
+      "hash": "9966804c346a8036ba88fb74380bc54dde1e86f8956fe69b0dd74cf3d0c03a17"
+    },
+    {
+      "event_no": 32,
+      "step": 2,
+      "kind": "INFORMATION_EVENT",
+      "detail": "Formal institutional disclosure (details withheld).",
+      "prev_hash": "9966804c346a8036ba88fb74380bc54dde1e86f8956fe69b0dd74cf3d0c03a17",
+      "hash": "0eee43d8ee49a1d1ce432414be05119328650ff99e9e87318ef88e941b023290"
+    },
+    {
+      "event_no": 33,
+      "step": 2,
+      "kind": "INFORMATION_RECIPIENTS",
+      "detail": "Coordinator, Logistics, Auditor",
+      "prev_hash": "0eee43d8ee49a1d1ce432414be05119328650ff99e9e87318ef88e941b023290",
+      "hash": "08bb1916a05bc1f05835be3b26753609461c3c18d83424171fc2aa9bb9635c59"
+    },
+    {
+      "event_no": 34,
+      "step": 2,
+      "kind": "PLAN_PROPOSAL",
+      "detail": "candidate transfers=2; units=30; weighted unmet=168",
+      "prev_hash": "08bb1916a05bc1f05835be3b26753609461c3c18d83424171fc2aa9bb9635c59",
+      "hash": "c4530fc3776de164e2f73f07f10a1d7d361fe1ff4efdd525ba8a29436e24f839"
+    },
+    {
+      "event_no": 35,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Coordinator: Proposal awaits independent operational validation and human authorization; only disclosures addressed to Coordinator change its route facts. | claims=C-ITU-002",
+      "prev_hash": "c4530fc3776de164e2f73f07f10a1d7d361fe1ff4efdd525ba8a29436e24f839",
+      "hash": "48065cff4ea90d770a97c0b9240dbbd07d64d875ea92199c4bace2bb416821d5"
+    },
+    {
+      "event_no": 36,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Hospital: Modeled five-day shortage totals 72 synthetic packs. | claims=C-WHO-001",
+      "prev_hash": "48065cff4ea90d770a97c0b9240dbbd07d64d875ea92199c4bace2bb416821d5",
+      "hash": "0577354c8abb515fdd60d9c3cecbdbc5045ca7df0590868d3cc2a49b301cbd23"
+    },
+    {
+      "event_no": 37,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Inventory: Donor spare after safety reserves: Hospital A=0, Hospital B=90, Hospital C=0 | claims=",
+      "prev_hash": "0577354c8abb515fdd60d9c3cecbdbc5045ca7df0590868d3cc2a49b301cbd23",
+      "hash": "0333fadada30fa1e3db45fcf28e4ab4419a432e4f485d04b532955fe48d7b9ea"
+    },
+    {
+      "event_no": 38,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Demand: Proposed plan leaves 42 generic packs unmet in this model. | claims=",
+      "prev_hash": "0333fadada30fa1e3db45fcf28e4ab4419a432e4f485d04b532955fe48d7b9ea",
+      "hash": "68371a78eb6273f37cfea22aa9575985f3d8b8ac9e00707d861f803024f4d63e"
+    },
+    {
+      "event_no": 39,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Supplier: Private supplier report received; other institutions may have stale data. | claims=C-EDE-001",
+      "prev_hash": "68371a78eb6273f37cfea22aa9575985f3d8b8ac9e00707d861f803024f4d63e",
+      "hash": "b1702efc1da933f1e71ed3f1e00e6d4e72b65d020ec76bbcfd5866c6ef6c0762"
+    },
+    {
+      "event_no": 40,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Logistics: 2 routes proposed; temperature and capacity checks are separate. | claims=",
+      "prev_hash": "b1702efc1da933f1e71ed3f1e00e6d4e72b65d020ec76bbcfd5866c6ef6c0762",
+      "hash": "d54dbd6bb3354e16f0cea931a1b582d9f929a284c6a1fc3f15376230a4f7ce03"
+    },
+    {
+      "event_no": 41,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Regulator: HUMAN_REVIEW_REQUIRED: Candidate movements are NOT approved. Qualified local authorities must verify product registration, facility authority, required permits and distribution conditions. High-level policy announcements do not authorize a transfer. | claims=C-EDE-002,C-EDE-001",
+      "prev_hash": "d54dbd6bb3354e16f0cea931a1b582d9f929a284c6a1fc3f15376230a4f7ce03",
+      "hash": "106182e5e13df7282f10dcf0f16a5ea854343a2d56019890b666154c5eb90ed2"
+    },
+    {
+      "event_no": 42,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "GlobalPolicy: EMA EU/EEA solidarity example is non-binding in the UAE. | claims=C-EMA-001",
+      "prev_hash": "106182e5e13df7282f10dcf0f16a5ea854343a2d56019890b666154c5eb90ed2",
+      "hash": "a92a2290212f68de2ceba9c5f466e1d3301b013460cf50d371e3d2bab6c596b6"
+    },
+    {
+      "event_no": 43,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Equity: Unmet modeled demand by facility: {'Hospital A': 42, 'Hospital B': 0, 'Hospital C': 0} | claims=",
+      "prev_hash": "a92a2290212f68de2ceba9c5f466e1d3301b013460cf50d371e3d2bab6c596b6",
+      "hash": "3c7923b1e497573f87c5efedacc44d6139239879126867a84b1864073b4394e5"
+    },
+    {
+      "event_no": 44,
+      "step": 2,
+      "kind": "AGENT_ASSESSMENT",
+      "detail": "Auditor: Audit requires independent validation, evidence traceability, and explicit human clearance. | claims=C-ITU-002",
+      "prev_hash": "3c7923b1e497573f87c5efedacc44d6139239879126867a84b1864073b4394e5",
+      "hash": "82a053dfa2bb743c66b04118cc62d012f7f03be612a01087877e789ed1ce5b73"
+    },
+    {
+      "event_no": 45,
+      "step": 2,
+      "kind": "INDEPENDENT_OPERATIONAL_CHECK",
+      "detail": "passes=True; issues=[]",
+      "prev_hash": "82a053dfa2bb743c66b04118cc62d012f7f03be612a01087877e789ed1ce5b73",
+      "hash": "b13a3fc64270c5e8caf29838e13b19e773e8ddad3d5f5fa43be76f29f76b10b3"
+    },
+    {
+      "event_no": 46,
+      "step": 2,
+      "kind": "LEGAL_GATE",
+      "detail": "status=HUMAN_REVIEW_REQUIRED; no autonomous permissions",
+      "prev_hash": "b13a3fc64270c5e8caf29838e13b19e773e8ddad3d5f5fa43be76f29f76b10b3",
+      "hash": "6bd74d704a71119e64f29c5aa1b5b84a7e0c8f22ea1816d8c86a931ce96f47de"
+    },
+    {
+      "event_no": 47,
+      "step": 2,
+      "kind": "POLICY_QUESTIONS",
+      "detail": "expert-review questions=2; confirmed legal gaps=0",
+      "prev_hash": "6bd74d704a71119e64f29c5aa1b5b84a7e0c8f22ea1816d8c86a931ce96f47de",
+      "hash": "c4b68cd6dd56bc426837ab4b7c37a0fcda3fc60473b9bb34517564b44e00f68e"
+    }
+  ],
+  "audit_verification": {
+    "valid": true,
+    "entries": 47,
+    "head": "c4b68cd6dd56bc426837ab4b7c37a0fcda3fc60473b9bb34517564b44e00f68e"
+  }
+}

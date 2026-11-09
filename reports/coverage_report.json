@@ -1,0 +1,105 @@
+{
+  "source_count": 13,
+  "claim_count": 17,
+  "category_coverage": {
+    "medical_product_law": {
+      "source_ids": [
+        "EDE-LAW",
+        "UAE-FDL38-2024"
+      ],
+      "linked_claim_count": 3,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    },
+    "emergency_controlled_transfer_service": {
+      "source_ids": [
+        "EDE-EMERGENCY-TRANSFER"
+      ],
+      "linked_claim_count": 2,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    },
+    "pharmaceutical_supply_policy": {
+      "source_ids": [
+        "EDE-MULTI-AGENT"
+      ],
+      "linked_claim_count": 1,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    },
+    "national_ai_governance": {
+      "source_ids": [
+        "UAE-AI-CHARTER",
+        "UAE-AI-INTL"
+      ],
+      "linked_claim_count": 2,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    },
+    "national_ai_security": {
+      "source_ids": [
+        "UAE-AI-CYBER"
+      ],
+      "linked_claim_count": 1,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    },
+    "personal_data_protection": {
+      "source_ids": [
+        "UAE-PDPL-INDEX"
+      ],
+      "linked_claim_count": 1,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    },
+    "health_information_confidentiality": {
+      "source_ids": [
+        "UAE-HEALTHICT-2019"
+      ],
+      "linked_claim_count": 2,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    },
+    "international_essential_medicines": {
+      "source_ids": [
+        "WHO-EML-2025"
+      ],
+      "linked_claim_count": 1,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    },
+    "international_shortage_response": {
+      "source_ids": [
+        "EMA-VSM"
+      ],
+      "linked_claim_count": 1,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    },
+    "itu_rules_and_standard": {
+      "source_ids": [
+        "ITU-CHALLENGE",
+        "ITU-Y3172"
+      ],
+      "linked_claim_count": 3,
+      "full_binding_text_ingested": false,
+      "expert_review_complete": false
+    }
+  },
+  "missing_curated_sources": [],
+  "orphan_claim_sources": [],
+  "jurisdictions": {
+    "UAE": 9,
+    "international": 2,
+    "EU/EEA (comparison only)": 1,
+    "ITU hackathon": 1
+  },
+  "known_gaps": [
+    "Full currently operative binding pharmaceutical provisions not independently reviewed",
+    "Product-specific and institution-specific authorization not established",
+    "Data-sharing applicability and exceptions not independently reviewed",
+    "UAE Health ICT Law 2/2019 Articles 4/13/16 checked in English; Arabic and applicability pending",
+    "Claim entailment requires human annotation; source existence is not proof"
+  ],
+  "status": "metadata_and_page_summary_only_not_full_national_kb"
+}

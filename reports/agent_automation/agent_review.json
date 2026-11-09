@@ -1,0 +1,144 @@
+{
+  "name": "MedRoute X automated reviewer council",
+  "generated_at_utc": "2026-11-09T00:25:22.302546+00:00",
+  "method": "offline deterministic checks, not independent generative agents",
+  "case_count": 30,
+  "status": "completed_with_warnings",
+  "counts": {
+    "pass": 3,
+    "warning": 3,
+    "fail": 0
+  },
+  "agents": [
+    {
+      "agent": "CodeQualityAgent",
+      "status": "pass",
+      "detail": "Unit and regression tests executed with pytest.",
+      "evidence": {
+        "returncode": 0,
+        "command": [
+          "-m",
+          "pytest",
+          "-q",
+          "-o",
+          "addopts="
+        ],
+        "output_tail": "........................................................................ [ 19%]\n........................................................................ [ 38%]\n........................................................................ [ 57%]\n........................................................................ [ 76%]\n........................................................................ [ 95%]\n................                                                         [100%]\n376 passed in 20.36s\n\n"
+      }
+    },
+    {
+      "agent": "ProtocolSafetyAgent",
+      "status": "pass",
+      "detail": "Three flagship states plus five per-alert disclosure states assessed.",
+      "evidence": {
+        "states": [
+          {
+            "step": 0,
+            "roles": 10,
+            "audit_valid": true,
+            "no_agent_authorizations": true,
+            "operational_pass": true,
+            "release_status": "PENDING_AUTHORIZATION"
+          },
+          {
+            "step": 1,
+            "roles": 10,
+            "audit_valid": true,
+            "no_agent_authorizations": true,
+            "operational_pass": false,
+            "release_status": "BLOCKED_OPERATIONAL"
+          },
+          {
+            "step": 2,
+            "roles": 10,
+            "audit_valid": true,
+            "no_agent_authorizations": true,
+            "operational_pass": true,
+            "release_status": "PENDING_AUTHORIZATION"
+          }
+        ],
+        "disclosure_alert_pattern": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "public_redaction_ok": true,
+        "problems": [],
+        "mode": "offline_scripted"
+      }
+    },
+    {
+      "agent": "KnowledgeEvidenceAgent",
+      "status": "warning",
+      "detail": "Full binding UAE texts and expert validation are still missing.",
+      "evidence": {
+        "source_count": 14,
+        "claim_count": 18,
+        "orphan_sources": [],
+        "missing_sources": [],
+        "national_full_text_complete": false,
+        "expert_review_complete": false,
+        "curated_retrieval": {
+          "scope": "curated high-level source summaries only",
+          "n": 8,
+          "k": 3,
+          "hit_at_1": 1.0,
+          "hit_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "limitation": "Not a national corpus benchmark, no semantic legal entailment assessment."
+        },
+        "retrieval_note": "Near-source curated queries; not proof of legal retrieval accuracy."
+      }
+    },
+    {
+      "agent": "ExperimentAgent",
+      "status": "pass",
+      "detail": "Seeded synthetic baseline comparison; improvements are not clinical outcomes.",
+      "evidence": {
+        "case_count": 30,
+        "seed": 2026,
+        "priority_weighted_reduction_percent": 10.69,
+        "greedy_unmet": 33.37,
+        "optimized_unmet": 33.37,
+        "operational_valid_all": true,
+        "per_method_count_correct": true
+      }
+    },
+    {
+      "agent": "ResearchAndITUAgent",
+      "status": "warning",
+      "detail": "Existing desk research needs independent freshness and novelty verification; published contest criteria are mapped but not formally scored.",
+      "evidence": {
+        "novelty_scan": true,
+        "itu_traceability": true,
+        "live_web_research_performed": false,
+        "validated_world_first_novelty": false,
+        "official_jury_score": null
+      }
+    },
+    {
+      "agent": "SubmissionAgent",
+      "status": "warning",
+      "detail": "Local deliverables present; GitHub publishing, expert review, actual live LLM tests and competition submission remain outside this automation.",
+      "evidence": {
+        "artifacts": {
+          "report_pdf": true,
+          "demo_script": true,
+          "knowledge_sources": true,
+          "submission_readiness": true
+        },
+        "github_published": false,
+        "submitted_to_itu": false,
+        "live_llm_validated": false,
+        "pdf_page_limit_verified_by_this_agent": false
+      }
+    }
+  ],
+  "non_claims": [
+    "No verified clinical, legal or public-sector expert approval.",
+    "No GitHub access, no external LLM API usage, no deployment.",
+    "No claim that medicine transfers are permitted."
+  ]
+}

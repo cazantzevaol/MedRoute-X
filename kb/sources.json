@@ -1,0 +1,269 @@
+[
+  {
+    "id": "EDE-LAW",
+    "jurisdiction": "UAE",
+    "authority": "Emirates Drug Establishment",
+    "title": "EDE published legislation catalogue",
+    "type": "primary-source-index",
+    "url": "https://ede.gov.ae/en/legislations",
+    "summary": "Official index includes federal legislation governing medical products and a national essential medicines list. The index alone does not establish permission for an inter-hospital transfer.",
+    "tags": [
+      "UAE",
+      "law",
+      "registration",
+      "pharmacy",
+      "authorization",
+      "essential medicines"
+    ],
+    "ingestion_status": "metadata_and_verified_summary_only",
+    "legal_review": "pending"
+  },
+  {
+    "id": "EDE-MULTI-AGENT",
+    "jurisdiction": "UAE",
+    "authority": "Emirates Drug Establishment",
+    "title": "EDE multiple authorized commercial agents mechanism, 24 February 2026",
+    "type": "official-announcement",
+    "url": "https://www.ede.gov.ae/en/w/emirates-drug-establishment-breaks-the-monopoly-of-medical-products-in-the-country",
+    "summary": "EDE announced activation of a mechanism requiring companies to appoint more than one authorized commercial agent for each medical product marketed in the UAE. These are commercial agents, not AI agents.",
+    "tags": [
+      "UAE",
+      "law",
+      "multiple agents",
+      "suppliers",
+      "supply continuity",
+      "medicine"
+    ],
+    "ingestion_status": "metadata_and_verified_summary_only",
+    "legal_review": "pending"
+  },
+  {
+    "id": "WHO-EML-2025",
+    "jurisdiction": "international",
+    "authority": "World Health Organization",
+    "title": "WHO Model List of Essential Medicines, 24th edition (2025)",
+    "type": "international-guidance",
+    "url": "https://www.who.int/groups/expert-committee-on-selection-and-use-of-essential-medicines/essential-medicines-lists/",
+    "summary": "WHO maintains an essential medicines model list to guide country priorities. It is not a permit to distribute or substitute any specific product.",
+    "tags": [
+      "essential medicines",
+      "health",
+      "medicine",
+      "WHO",
+      "global",
+      "policy"
+    ],
+    "ingestion_status": "metadata_and_verified_summary_only",
+    "legal_review": "not_a_legal_authority"
+  },
+  {
+    "id": "EMA-VSM",
+    "jurisdiction": "EU/EEA (comparison only)",
+    "authority": "European Medicines Agency",
+    "title": "EMA Voluntary Solidarity Mechanism for critical shortages",
+    "type": "international-comparative-policy",
+    "url": "https://www.ema.europa.eu/en/about-us/who-we-are/executive-steering-group-shortages-medicinal-products",
+    "summary": "A voluntary mechanism supports countries seeking assistance during exceptional critical shortages. Its procedures are not binding in the UAE.",
+    "tags": [
+      "EMA",
+      "global comparison",
+      "shortage",
+      "solidarity",
+      "medicine",
+      "policy"
+    ],
+    "ingestion_status": "metadata_and_verified_summary_only",
+    "legal_review": "not_applicable_in_uae"
+  },
+  {
+    "id": "ITU-CHALLENGE",
+    "jurisdiction": "ITU hackathon",
+    "authority": "International Telecommunication Union",
+    "title": "AI for Good Lab Hackathon UAE 2026 — evaluation criteria",
+    "type": "competition-rules",
+    "url": "https://aiforgood.itu.int/event/ai-for-good-sandbox-hackathon-united-arab-emirates/",
+    "summary": "Official 2026 UAE hackathon evaluation requires national knowledge base, agent scenarios, global policy examples, evidence logs and Y.3172/AI readiness mapping.",
+    "tags": [
+      "ITU",
+      "hackathon",
+      "criteria",
+      "auditability",
+      "policy"
+    ],
+    "ingestion_status": "metadata_and_verified_summary_only",
+    "legal_review": "not_a_legal_authority"
+  },
+  {
+    "id": "ITU-Y3172",
+    "jurisdiction": "international",
+    "authority": "International Telecommunication Union",
+    "title": "ITU-T Y.3172 architectural framework (2019)",
+    "type": "technical-standard",
+    "url": "https://www.itu.int/ITU-T/recommendations/rec.aspx?id=13894",
+    "summary": "Describes ML pipeline, function orchestration and sandbox for future networks. MedRoute is an architectural analogy, not Y.3172 certification.",
+    "tags": [
+      "ITU",
+      "standards",
+      "Y.3172",
+      "MLFO",
+      "pipeline",
+      "architecture"
+    ],
+    "ingestion_status": "metadata_and_verified_summary_only",
+    "legal_review": "not_a_legal_authority"
+  },
+  {
+    "id": "UAE-AI-CHARTER",
+    "jurisdiction": "UAE",
+    "authority": "Official UAE Government Portal",
+    "title": "UAE Charter for the Development and Use of Artificial Intelligence",
+    "type": "national-AI-policy-overview",
+    "url": "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/Ai/The-UAE-Charter-for-the-Development-and-Use-of-Artificial-Intelligence",
+    "summary": "The official charter overview emphasizes responsible AI, privacy, safety, fairness, transparency, accountability and compliance with applicable law. Source is a policy overview, not product-specific approval.",
+    "tags": [
+      "AI",
+      "UAE",
+      "human oversight",
+      "fairness",
+      "privacy",
+      "governance"
+    ],
+    "ingestion_status": "official_page_reviewed_summary_only",
+    "legal_review": "pending"
+  },
+  {
+    "id": "UAE-AI-CYBER",
+    "jurisdiction": "UAE",
+    "authority": "Official UAE Government Portal",
+    "title": "National Cyber Security Policy for Artificial Intelligence",
+    "type": "national-AI-security-policy-overview",
+    "url": "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/cyber-activities/The-National-Cyber-Security-Policy-for-Artificial-Intelligence",
+    "summary": "The official overview covers AI operational safety, secure ML asset lifecycle, monitoring, resilience and human oversight in critical decisions. Full downloadable text is not bundled.",
+    "tags": [
+      "AI",
+      "cybersecurity",
+      "oversight",
+      "resilience",
+      "data integrity"
+    ],
+    "ingestion_status": "official_page_reviewed_summary_only",
+    "legal_review": "pending"
+  },
+  {
+    "id": "UAE-PDPL-INDEX",
+    "jurisdiction": "UAE",
+    "authority": "Official UAE Government Portal",
+    "title": "UAE cyber laws catalogue (including Federal Decree-Law No 45 of 2021 on personal data protection)",
+    "type": "law-index",
+    "url": "https://u.ae/en/Resources/Cyber-laws",
+    "summary": "Official cyber laws catalogue identifies the federal personal data protection law. The index does not establish applicability, exemptions or permitted processing for a specific inter-hospital exchange.",
+    "tags": [
+      "data protection",
+      "privacy",
+      "law",
+      "sharing",
+      "UAE"
+    ],
+    "ingestion_status": "official_page_reviewed_summary_only",
+    "legal_review": "pending"
+  },
+  {
+    "id": "UAE-AI-INTL",
+    "jurisdiction": "UAE",
+    "authority": "Official UAE Government Portal",
+    "title": "UAE International Stance on Artificial Intelligence Policy",
+    "type": "national-strategy-policy-overview",
+    "url": "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/Ai/The-UAEs-International-Stance-on-Artificial-Intelligence-Policy",
+    "summary": "Government portal describes principles of progress, collaboration, community, ethics, sustainability and safety for AI in international governance. Not binding medical distribution authorization.",
+    "tags": [
+      "AI",
+      "policy",
+      "international collaboration",
+      "UAE",
+      "governance"
+    ],
+    "ingestion_status": "official_page_reviewed_summary_only",
+    "legal_review": "pending"
+  },
+  {
+    "id": "UAE-FDL38-2024",
+    "jurisdiction": "UAE",
+    "authority": "UAE Legislation Portal",
+    "title": "Federal Decree-Law No. 38 of 2024 Governing Medical Products, Pharmacists and Pharmaceutical Establishments",
+    "type": "official-legislation-metadata",
+    "url": "https://uaelegislation.gov.ae/en/legislations/2751",
+    "summary": "Official UAE legislation portal lists this law as active, issued 1 October 2024 and effective 2 January 2025. English text is informational; the original Arabic prevails in case of conflict. No product-specific transfer authorization has been established by this metadata review.",
+    "tags": [
+      "UAE",
+      "Federal Decree-Law 38 of 2024",
+      "medical products",
+      "pharmacy",
+      "law",
+      "regulatory authority"
+    ],
+    "ingestion_status": "official_legislation_metadata_only_no_article_extraction",
+    "legal_review": "pending_expert_review_original_arabic_prevails"
+  },
+  {
+    "id": "EDE-EMERGENCY-TRANSFER",
+    "jurisdiction": "UAE",
+    "authority": "Emirates Drug Establishment",
+    "title": "Approve Emergency Drugs and Psychotropic Materials — EDE service",
+    "type": "official-service-requirements",
+    "url": "https://ede.gov.ae/en/w/approve-emergency-drugs-and-psychotropic-materials",
+    "summary": "Official EDE service for requesting approval of emergency transfers of narcotic, psychotropic and semi-controlled medicines between eligible health facilities. Lists facility/director justification, licences, NOC, transferor import permit and patient-related supporting documents. Approval is issued by EDE, not by this simulator.",
+    "tags": [
+      "UAE",
+      "EDE",
+      "emergency",
+      "controlled medicine",
+      "psychotropic",
+      "narcotic",
+      "approval",
+      "transfer"
+    ],
+    "ingestion_status": "official_service_page_summary_verified_2026-10-30",
+    "legal_review": "expert_scope_and_applicability_review_pending"
+  },
+  {
+    "id": "UAE-HEALTHICT-2019",
+    "jurisdiction": "UAE",
+    "authority": "UAE Legislation Portal",
+    "title": "Federal Law No. 2 of 2019 on the Use of Information and Communications Technology in Health Fields",
+    "type": "official-federal-law-english-translation-article-excerpts-reviewed",
+    "url": "https://uaelegislation.gov.ae/en/legislations/1209/download",
+    "summary": "Official English translation, Articles 4, 13 and 16: health-data confidentiality and restricted circulation; rules for health-data processing outside UAE; patient confidentiality with enumerated exceptions. Applicability and Arabic original require qualified review. MedRoute accepts no real patient data.",
+    "tags": [
+      "UAE",
+      "health data",
+      "privacy",
+      "confidentiality",
+      "Federal Law 2 of 2019",
+      "article 4",
+      "article 13",
+      "article 16"
+    ],
+    "ingestion_status": "official_english_article_excerpts_reviewed_2026-10-31_not_full_arabic_corpus",
+    "legal_review": "pending_expert_review_and_arabic_original_check"
+  },
+  {
+    "id": "EDE-SUPPLY-RESILIENCE-2026",
+    "jurisdiction": "UAE",
+    "authority": "Emirates Drug Establishment",
+    "title": "EDE announcement on multiple authorised agents for medical products (24 February 2026)",
+    "type": "official-regulator-news-not-binding-text",
+    "url": "https://www.ede.gov.ae/en/w/emirates-drug-establishment-breaks-the-monopoly-of-medical-products-in-the-country",
+    "summary": "EDE announced activation of a mechanism requiring more than one authorised agent for each medical product marketed in UAE, referring to Federal Decree-Law No. 38 of 2024. News announcement only; legal text, scope, implementation and exceptions need expert review. Not a hospital transfer permission.",
+    "tags": [
+      "UAE",
+      "EDE",
+      "supply resilience",
+      "authorized agents",
+      "2026",
+      "shortage",
+      "medical products"
+    ],
+    "ingestion_status": "official_news_page_read_2026-11-06_not_statute",
+    "legal_review": "pending_binding_law_and_implementation_review"
+  }
+]

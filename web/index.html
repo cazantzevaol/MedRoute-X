@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" translate="no"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedRoute X · Medicine Continuity Sandbox</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header class="top"><div class="brand"><span class="brand-mark">M<span>X</span></span><div><strong>MEDROUTE X</strong><small>AI for Good Lab · Policy-aware medicine continuity</small></div></div><div class="topright"><span class="chip">RESEARCH PROTOTYPE</span><span class="mono">UAE 2026</span></div></header>
+<main>
+<section class="hero"><div><div class="eyebrow">THE MEDICINE CONTINUITY SANDBOX</div><h1>Protect supply.<br><em>Prove the decision.</em></h1><p>Ten institutional roles, constrained messages and a hard operational check — with legal authorization always reserved for qualified humans.</p><div class="tools"><button id="advance" class="primary">Release next event <span>→</span></button><button id="jump-disruption" class="secondary" hidden>Test route disruption</button><button id="edit-scenario" class="secondary">Edit scenario</button><button id="example" class="secondary">Restore built-in example</button><button id="reset" class="secondary">Reset simulation</button><button id="benchmark" class="secondary">Run 30-case benchmark</button><button id="ai-briefing" class="secondary">AI briefing (local)</button><button id="councilrun" class="secondary">Run 10-role council</button><button id="download" class="secondary">Download evidence JSON ↓</button></div><p id="agent-hero-status" role="status" aria-live="polite"></p><details class="scenario-files"><summary>Scenario file options</summary>
+<div class="tools"><button id="download-template" class="secondary">Download JSON template</button>
+<label class="secondary">Load synthetic JSON <input id="scenario-file" type="file" accept=".json,application/json"></label></div>
+<p id="scenario-file-status" role="status">Download a sample file or load a saved scenario. The benchmark always uses its own 30 cases.</p>
+</details></div><div class="hero-card"><div class="eyebrow">SIMULATION STATUS</div><div id="status" class="status">Loading</div><div id="scenario-name"></div><p id="ai-briefing-status" role="status"></p><div id="simulation-error" role="alert"></div><div class="small">Step <span id="step">0</span> of <span id="steps-total">2</span></div><div id="event" class="event">Initial coordination view</div><div class="disclaimer">Synthetic demand & inventories · No patient data · No autonomous transfers</div></div></section>
+<section id="disruption-panel" class="panel" hidden>
+ <h2>Test a route disruption</h2>
+ <p>Report a reduction as the supplier, then confirm it to share the update with the coordinator.</p>
+ <p id="disruption-status" role="status"></p>
+ <form id="disruption-form" class="tools">
+  <label>Route <select id="disruption-route" required></select></label>
+  <label>Reduced capacity (packs) <input id="disruption-capacity" type="number" min="0" step="1" required></label>
+  <button id="report-disruption" class="secondary">Report disruption</button>
+ </form>
+ <button id="confirm-disruption" class="secondary" hidden>Confirm and share with coordinator</button>
+</section>
+<section id="scenario-editor" class="panel" hidden>
+ <h2>Edit synthetic scenario</h2>
+ <p>Adjust the current scenario and calculate a plan. Facility identifiers are numbered in the editor. Use invented values only.</p>
+ <form id="scenario-form">
+  <p id="editor-count"></p><div class="tools"><button type="button" class="secondary" id="add-facility">+ Add facility</button><button type="button" class="secondary" id="add-route">+ Add route</button></div>
+  <div id="scenario-fields"></div>
+  <div class="tools">
+   <button class="primary" type="submit">Calculate plan</button>
+   <button class="secondary" type="button" id="save-scenario">Save as JSON</button>
+   <button class="secondary" type="button" id="close-scenario">Close editor</button>
+  </div>
+ </form>
+ <p id="editor-status" role="status"></p>
+</section>
+
+<section class="panel" id="decision-panel">
+<h2>Supply review</h2><p id="decision-status" role="status">Preparing the review…</p>
+<div id="review-recommendation"></div>
+<div class="tools"><button id="feedback-useful" class="secondary" disabled>Useful proposal</button>
+<button id="feedback-unhelpful" class="secondary" disabled>Does not fit</button></div>
+<p id="feedback-status" role="status">Local feedback helps select between equally effective valid options.</p><details><summary>Compare all three proposals</summary><div id="decision-options"></div></details><p id="decision-next"></p>
+<button id="download-review" class="secondary" disabled>Download review packet</button>
+<details><summary>Review tasks and evidence</summary><div id="decision-tasks"></div></details>
+</section>
+<section class="metrics"><div class="metric"><span>Unmet demand before plan</span><strong id="before">—</strong><small>synthetic packs over the scenario horizon</small></div><div class="metric"><span>Unmet under proposed plan</span><strong id="after">—</strong><small>assuming all approvals obtained</small></div><div class="metric"><span>Units covered in proposal</span><strong id="covered">—</strong><small>not executed transfers</small></div><div class="metric"><span>Operational validator</span><strong class="check" id="operational">—</strong><small>checked against actual test conditions</small></div></section>
+<section class="panel"><h2>Where supply is still missing</h2>
+<p id="shortfall-note"></p><div id="shortfall-by-site"></div></section>
+<section class="two"><div class="panel"><div class="panel-header"><div><div class="eyebrow">INSTITUTIONAL NETWORK</div><h2>Supply network</h2></div><span class="chip neutral">Synthetic scenario</span></div><div id="sites" class="sites"></div><div class="note">All quantities are invented. Urgency weights are exercise-only and not clinical triage.</div><h3>Proposed inter-facility movements</h3><div id="transfers"></div></div><div class="panel"><div class="panel-header"><div><div class="eyebrow">PROOF BEFORE ACTION</div><h2>Independent safety gate</h2></div><span class="symbol">◈</span></div><div id="gate"></div><h3>Operational issues</h3><div id="issues"></div><h3>Policy research question</h3><div id="gap"></div></div></section>
+<details class="panel" open><summary>Agents, policy evidence and audit</summary><section class="panel"><div class="panel-header"><div><div class="eyebrow">ROLE-BASED COORDINATION</div><h2>Ten specialized agents</h2></div><span class="chip neutral">Inspectable role outputs</span></div><div class="tools">
+<button id="run-agents" class="primary">Run selected agents</button>
+<label><input id="auto-agents" type="checkbox"> Run after scenario changes</label>
+</div><p id="agent-run-status" role="status">Select roles and run their local checks.</p><div id="agents" class="agents"></div><div class="note">The selected roles run local protocol checks and exchange structured notices. Generative AI briefing is available separately when a local model is configured.</div></section>
+<section class="panel"><div class="panel-header"><div><div class="eyebrow">REGULATORY INTELLIGENCE</div><h2>Hypotheses, not invented laws</h2></div><span class="chip neutral">Source-grounded</span></div><p class="note">A document missing from this prototype never means that no law exists. Each row is a research question for qualified review.</p><div id="policy" class="policygrid"></div></section><section class="two lower"><div class="panel"><div class="eyebrow">SEQUENCED DISCLOSURE</div><h2>Information does not arrive all at once</h2><div id="reports"></div></div><div class="panel"><div class="eyebrow">REPRODUCIBILITY</div><h2>Audit trail</h2><div id="audit"></div></div></section>
+</details><section class="panel bench-panel" id="councilpanel" hidden><div class="eyebrow">INTER-AGENT PROTOCOL V0.3</div><h2>Inspectable institutional dialogue</h2><p id="council-status" role="status" aria-live="polite"></p><p class="note">Role-scoped observations, typed non-free-text handoffs and a separate independent check. This web run uses scripted offline agents, not a live language model. These checks do not change the plan. Formal disclosure of an update to the coordinator triggers replanning; human authorization is still required.</p><div id="councillist" class="agents"></div></section>
+<section class="panel bench-panel" id="benchpanel" hidden><div class="eyebrow">30 SEEDED SYNTHETIC CASES</div><h2>Benchmark: compare policies, not marketing claims</h2><div id="benchrows"></div><p class="note">This benchmark measures modeled unmet units and operational validity — not actual patient outcomes, medical accuracy or legal compliance. Authorization is never granted by this demo.</p></section>
+<footer>MedRoute X v0.3 · Research-only, not a medical, pharmaceutical, procurement or legal decision support system · <a href="https://aiforgood.itu.int/event/ai-for-good-sandbox-hackathon-united-arab-emirates/" target="_blank" rel="noopener">ITU challenge rules</a></footer>
+</main><script src="/app.js" defer></script></body></html>

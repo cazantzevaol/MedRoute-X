@@ -1,0 +1,22 @@
+{
+  "release": "0.10",
+  "local_preflight_passed": true,
+  "report_pages": 5,
+  "source_count": 14,
+  "claim_count": 18,
+  "issues": [],
+  "external_requirements": {
+    "registration_or_team_eligibility": "UNVERIFIED",
+    "github_repository_accessible_to_judges": "UNVERIFIED",
+    "organizer_submission": "NOT_PERFORMED",
+    "expert_legal_and_pharmacy_review": "NOT_PERFORMED"
+  },
+  "regulatory_evidence": {
+    "sources_not_verified": 14,
+    "claims_not_verified": 18,
+    "expert_signoff": "NOT_VERIFIED",
+    "status": "REQUIRES_REVIEW"
+  },
+  "submission_ready": false,
+  "notice": "Local checks do not certify legal compliance, registration or submission."
+}

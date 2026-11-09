@@ -1,0 +1,769 @@
+{
+  "protocol_version": "0.6",
+  "scenario_id": "CASE-001",
+  "step": 1,
+  "provider_mode": "offline_scripted_protocol",
+  "expected_role_count": 10,
+  "roles_executed": [
+    "Hospital",
+    "Inventory",
+    "Demand",
+    "Supplier",
+    "Logistics",
+    "Regulator",
+    "GlobalPolicy",
+    "Equity",
+    "Coordinator",
+    "Auditor"
+  ],
+  "trace": [
+    {
+      "role": "Hospital",
+      "mode": "offline_scripted_protocol",
+      "summary": "Hospital assessment: only use role-visible quantities and documented constraints; escalate unknown facts for institutional review.",
+      "cited_claim_ids": [
+        "C-EDE-003"
+      ],
+      "evidence_urls": [
+        "https://ede.gov.ae/en/legislations"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Report facility shortage and care continuity needs (no patient records)",
+      "observation_keys": [
+        "mandate",
+        "received_reports",
+        "role",
+        "scenario_id",
+        "sites",
+        "step"
+      ],
+      "private_reports_visible": 0,
+      "incoming_handoffs": [],
+      "outgoing_handoff": {
+        "from": "Hospital",
+        "intent": "INSTITUTIONAL_ASSESSMENT",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-EDE-003"
+        ],
+        "has_private_information": false,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "f8ccbd79b29a08927117b16e0fb356732b1de73bf0bd81204c8e01d961f90e5a",
+      "record_sha256": "320a6fd5b27398ed244a89ac9e4655dffc66fcc01c72b022f72b87540df88b91"
+    },
+    {
+      "role": "Inventory",
+      "mode": "offline_scripted_protocol",
+      "summary": "Inventory assessment: only use role-visible quantities and documented constraints; escalate unknown facts for institutional review.",
+      "cited_claim_ids": [
+        "C-EDE-003"
+      ],
+      "evidence_urls": [
+        "https://ede.gov.ae/en/legislations"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Validate stock, reserves and consistency of inventory quantities",
+      "observation_keys": [
+        "mandate",
+        "received_reports",
+        "role",
+        "scenario_id",
+        "sites",
+        "step"
+      ],
+      "private_reports_visible": 0,
+      "incoming_handoffs": [],
+      "outgoing_handoff": {
+        "from": "Inventory",
+        "intent": "INSTITUTIONAL_ASSESSMENT",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-EDE-003"
+        ],
+        "has_private_information": false,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "c948fdf663b05fb5becdbaa7a4a49c74babe40476f0cfcf1f2ed72f8f7453a41",
+      "record_sha256": "36455a3da20cff53c54e2518f289753cf97f592c5775185fbf4888fa4a1edd8d"
+    },
+    {
+      "role": "Demand",
+      "mode": "offline_scripted_protocol",
+      "summary": "Demand assessment: only use role-visible quantities and documented constraints; escalate unknown facts for institutional review.",
+      "cited_claim_ids": [
+        "C-EDE-003"
+      ],
+      "evidence_urls": [
+        "https://ede.gov.ae/en/legislations"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Estimate unmet modeled demand over the planning horizon",
+      "observation_keys": [
+        "mandate",
+        "received_reports",
+        "role",
+        "scenario_id",
+        "sites",
+        "step"
+      ],
+      "private_reports_visible": 0,
+      "incoming_handoffs": [],
+      "outgoing_handoff": {
+        "from": "Demand",
+        "intent": "INSTITUTIONAL_ASSESSMENT",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-EDE-003"
+        ],
+        "has_private_information": false,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "12eb1cc57ecd3f05b329d1ade608f44c2c1eadcee50f5b78488a8e7288e66fae",
+      "record_sha256": "998cab20cfc188ff00833023b7ecd8089059ec935212f5f4ce775465707fef0f"
+    },
+    {
+      "role": "Supplier",
+      "mode": "offline_scripted_protocol",
+      "summary": "A supplier update is privately visible; request a formal disclosure workflow.",
+      "cited_claim_ids": [
+        "C-EDE-001"
+      ],
+      "evidence_urls": [
+        "https://www.ede.gov.ae/en/w/emirates-drug-establishment-breaks-the-monopoly-of-medical-products-in-the-country"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Receive supplier capacity updates and identify alternative supply options",
+      "observation_keys": [
+        "mandate",
+        "received_reports",
+        "role",
+        "routes",
+        "scenario_id",
+        "step"
+      ],
+      "private_reports_visible": 1,
+      "incoming_handoffs": [],
+      "outgoing_handoff": {
+        "from": "Supplier",
+        "intent": "REQUEST_FORMAL_DISCLOSURE",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-EDE-001"
+        ],
+        "has_private_information": true,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "05578e95a278d1f2a2399ae5320b59d38dc864de433e8f71d2dcca2379781ccd",
+      "record_sha256": "5bf0279b5a7ff07cb69d1000f34795e66ac35fe37bdbeda3c1e82c67a0f99720"
+    },
+    {
+      "role": "Logistics",
+      "mode": "offline_scripted_protocol",
+      "summary": "Logistics assessment: only use role-visible quantities and documented constraints; escalate unknown facts for institutional review.",
+      "cited_claim_ids": [
+        "C-EDE-003"
+      ],
+      "evidence_urls": [
+        "https://ede.gov.ae/en/legislations"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Assess transport capacity, timing and temperature constraints",
+      "observation_keys": [
+        "mandate",
+        "received_reports",
+        "role",
+        "routes",
+        "scenario_id",
+        "step"
+      ],
+      "private_reports_visible": 0,
+      "incoming_handoffs": [],
+      "outgoing_handoff": {
+        "from": "Logistics",
+        "intent": "INSTITUTIONAL_ASSESSMENT",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-EDE-003"
+        ],
+        "has_private_information": false,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "c3231068f47030adcb5c8130e5cfd4ce2629b5b12f4d90d613c542003caf33d9",
+      "record_sha256": "b161980b3102efd31317d119793ae647b2efd01d704377c74465cc4e13675675"
+    },
+    {
+      "role": "Regulator",
+      "mode": "offline_scripted_protocol",
+      "summary": "Verify product and facility authority from current binding UAE texts; do not assert that an announcement grants movement permission.",
+      "cited_claim_ids": [
+        "C-EDE-002"
+      ],
+      "evidence_urls": [
+        "https://ede.gov.ae/en/legislations"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Raise legal-authorization questions; may not issue legal permissions",
+      "observation_keys": [
+        "mandate",
+        "received_reports",
+        "role",
+        "scenario_id",
+        "source_refs",
+        "step"
+      ],
+      "private_reports_visible": 0,
+      "incoming_handoffs": [],
+      "outgoing_handoff": {
+        "from": "Regulator",
+        "intent": "EXPERT_REVIEW",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-EDE-002"
+        ],
+        "has_private_information": false,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "104771d69c7696f08e86a1a7b1f49f9d139fadcad68cad7d85cb46b606b255be",
+      "record_sha256": "414f8310ff0c449fe81766c0de5d1149b3628fcd4ac55ea838cae882a33dba0e"
+    },
+    {
+      "role": "GlobalPolicy",
+      "mode": "offline_scripted_protocol",
+      "summary": "Treat the EMA shortage mechanism as an EU/EEA comparator, never as UAE law.",
+      "cited_claim_ids": [
+        "C-EMA-001"
+      ],
+      "evidence_urls": [
+        "https://www.ema.europa.eu/en/about-us/who-we-are/executive-steering-group-shortages-medicinal-products"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Provide international comparisons labeled by jurisdiction",
+      "observation_keys": [
+        "mandate",
+        "received_reports",
+        "role",
+        "scenario_id",
+        "source_refs",
+        "step"
+      ],
+      "private_reports_visible": 0,
+      "incoming_handoffs": [],
+      "outgoing_handoff": {
+        "from": "GlobalPolicy",
+        "intent": "EXPERT_REVIEW",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-EMA-001"
+        ],
+        "has_private_information": false,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "6f3597cab4e41757acd293114568b1c4bcfa2d51af99d3100c9773a772efee61",
+      "record_sha256": "d99f96fe1f8f0573239121c33fc408ae96575b2f54d9b548d69a229aa39583e6"
+    },
+    {
+      "role": "Equity",
+      "mode": "offline_scripted_protocol",
+      "summary": "Equity assessment: only use role-visible quantities and documented constraints; escalate unknown facts for institutional review.",
+      "cited_claim_ids": [
+        "C-EDE-003"
+      ],
+      "evidence_urls": [
+        "https://ede.gov.ae/en/legislations"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Compare unmet demand across institutions using synthetic weights",
+      "observation_keys": [
+        "mandate",
+        "received_reports",
+        "role",
+        "scenario_id",
+        "sites",
+        "step"
+      ],
+      "private_reports_visible": 0,
+      "incoming_handoffs": [],
+      "outgoing_handoff": {
+        "from": "Equity",
+        "intent": "INSTITUTIONAL_ASSESSMENT",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-EDE-003"
+        ],
+        "has_private_information": false,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "cfc3811845c21f58c290752d818be947955749fe3c6a6780e242683e30f25e51",
+      "record_sha256": "4dec13ba513b69ae254bd17b9e47ab85577d83e74675f39bc53058ce2a5ddfd6"
+    },
+    {
+      "role": "Coordinator",
+      "mode": "offline_scripted_protocol",
+      "summary": "8 structured notices received. Replan only from formally disclosed facts. All proposed regulated transfers remain pending qualified human approval.",
+      "cited_claim_ids": [
+        "C-UAIINTL-001"
+      ],
+      "evidence_urls": [
+        "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/Ai/The-UAEs-International-Stance-on-Artificial-Intelligence-Policy"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Integrate reports and request approvals; cannot initiate transfers",
+      "observation_keys": [
+        "mandate",
+        "received_reports",
+        "role",
+        "routes",
+        "scenario_id",
+        "sites",
+        "step"
+      ],
+      "private_reports_visible": 0,
+      "incoming_handoffs": [
+        {
+          "from": "Hospital",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Inventory",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Demand",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Supplier",
+          "intent": "REQUEST_FORMAL_DISCLOSURE",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-001"
+          ],
+          "has_private_information": true,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Logistics",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Regulator",
+          "intent": "EXPERT_REVIEW",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-002"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "GlobalPolicy",
+          "intent": "EXPERT_REVIEW",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EMA-001"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Equity",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        }
+      ],
+      "outgoing_handoff": {
+        "from": "Coordinator",
+        "intent": "INSTITUTIONAL_ASSESSMENT",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-UAIINTL-001"
+        ],
+        "has_private_information": false,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "6d449b987b47acc459199e02f028698ac03af3e38b1c2334943be7524e4377d9",
+      "record_sha256": "2ea0b80522e8f7412ad2ec5f6bb25feca2cbd817a5534f7270944462a1c18379"
+    },
+    {
+      "role": "Auditor",
+      "mode": "offline_scripted_protocol",
+      "summary": "Independently compare the proposed plan against ground-truth operational checks; never treat a missing law in the corpus as proof that no law exists.",
+      "cited_claim_ids": [
+        "C-UAICYBER-001"
+      ],
+      "evidence_urls": [
+        "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/cyber-activities/The-National-Cyber-Security-Policy-for-Artificial-Intelligence"
+      ],
+      "open_questions": [
+        "Which authorized institution can verify this step?"
+      ],
+      "mandate": "Independently inspect evidence and operational validation; never self-authorize",
+      "observation_keys": [
+        "independent_operational_check",
+        "mandate",
+        "received_reports",
+        "release_status",
+        "role",
+        "routes",
+        "scenario_id",
+        "sites",
+        "source_refs",
+        "step"
+      ],
+      "private_reports_visible": 0,
+      "incoming_handoffs": [
+        {
+          "from": "Hospital",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Inventory",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Demand",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Supplier",
+          "intent": "REQUEST_FORMAL_DISCLOSURE",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-001"
+          ],
+          "has_private_information": true,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Logistics",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Regulator",
+          "intent": "EXPERT_REVIEW",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-002"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "GlobalPolicy",
+          "intent": "EXPERT_REVIEW",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EMA-001"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        },
+        {
+          "from": "Equity",
+          "intent": "INSTITUTIONAL_ASSESSMENT",
+          "legal_clearance": false,
+          "evidence_ids": [
+            "C-EDE-003"
+          ],
+          "has_private_information": false,
+          "content_policy": "no_free_text_forwarding"
+        }
+      ],
+      "outgoing_handoff": {
+        "from": "Auditor",
+        "intent": "INSTITUTIONAL_ASSESSMENT",
+        "legal_clearance": false,
+        "evidence_ids": [
+          "C-UAICYBER-001"
+        ],
+        "has_private_information": false,
+        "content_policy": "no_free_text_forwarding"
+      },
+      "review_required": true,
+      "transfer_authorized": false,
+      "public_request_sha256": "87ab41f76d2454c59bee5ec61c9b06e2c991f1c94ec22c3ed6c05ee9a45d6e67",
+      "record_sha256": "d3b1b2898ebac990cb32796471f6dee24577db2584f9859abedf7ac8a49921f0"
+    }
+  ],
+  "handoffs": [
+    {
+      "from": "Hospital",
+      "intent": "INSTITUTIONAL_ASSESSMENT",
+      "legal_clearance": false,
+      "evidence_ids": [
+        "C-EDE-003"
+      ],
+      "has_private_information": false,
+      "content_policy": "no_free_text_forwarding"
+    },
+    {
+      "from": "Inventory",
+      "intent": "INSTITUTIONAL_ASSESSMENT",
+      "legal_clearance": false,
+      "evidence_ids": [
+        "C-EDE-003"
+      ],
+      "has_private_information": false,
+      "content_policy": "no_free_text_forwarding"
+    },
+    {
+      "from": "Demand",
+      "intent": "INSTITUTIONAL_ASSESSMENT",
+      "legal_clearance": false,
+      "evidence_ids": [
+        "C-EDE-003"
+      ],
+      "has_private_information": false,
+      "content_policy": "no_free_text_forwarding"
+    },
+    {
+      "from": "Supplier",
+      "intent": "REQUEST_FORMAL_DISCLOSURE",
+      "legal_clearance": false,
+      "evidence_ids": [
+        "C-EDE-001"
+      ],
+      "has_private_information": true,
+      "content_policy": "no_free_text_forwarding"
+    },
+    {
+      "from": "Logistics",
+      "intent": "INSTITUTIONAL_ASSESSMENT",
+      "legal_clearance": false,
+      "evidence_ids": [
+        "C-EDE-003"
+      ],
+      "has_private_information": false,
+      "content_policy": "no_free_text_forwarding"
+    },
+    {
+      "from": "Regulator",
+      "intent": "EXPERT_REVIEW",
+      "legal_clearance": false,
+      "evidence_ids": [
+        "C-EDE-002"
+      ],
+      "has_private_information": false,
+      "content_policy": "no_free_text_forwarding"
+    },
+    {
+      "from": "GlobalPolicy",
+      "intent": "EXPERT_REVIEW",
+      "legal_clearance": false,
+      "evidence_ids": [
+        "C-EMA-001"
+      ],
+      "has_private_information": false,
+      "content_policy": "no_free_text_forwarding"
+    },
+    {
+      "from": "Equity",
+      "intent": "INSTITUTIONAL_ASSESSMENT",
+      "legal_clearance": false,
+      "evidence_ids": [
+        "C-EDE-003"
+      ],
+      "has_private_information": false,
+      "content_policy": "no_free_text_forwarding"
+    }
+  ],
+  "release_status_from_independent_engine": "BLOCKED_OPERATIONAL",
+  "operational_check_from_independent_engine": {
+    "passes": false,
+    "issues": [
+      "Route capacity exceeded for B-A (stale information?)"
+    ]
+  },
+  "human_approval_required": true,
+  "no_execution_or_medical_advice": true,
+  "audit": [
+    {
+      "event_no": 1,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "Hospital; public_input_metadata=f8ccbd79b29a08927117b16e0fb356732b1de73bf0bd81204c8e01d961f90e5a; record=320a6fd5b27398ed244a89ac9e4655dffc66fcc01c72b022f72b87540df88b91; evidence=C-EDE-003; legal approval=False",
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "adceadd83456ec92e10a6ea52b7a3ee1c3d6b152fb947a2ba9cd45dca23d0537"
+    },
+    {
+      "event_no": 2,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "Inventory; public_input_metadata=c948fdf663b05fb5becdbaa7a4a49c74babe40476f0cfcf1f2ed72f8f7453a41; record=36455a3da20cff53c54e2518f289753cf97f592c5775185fbf4888fa4a1edd8d; evidence=C-EDE-003; legal approval=False",
+      "prev_hash": "adceadd83456ec92e10a6ea52b7a3ee1c3d6b152fb947a2ba9cd45dca23d0537",
+      "hash": "f833603e5f24d356231ad75d6f092eb3f57baf6e2a3d9f69208897a0f7d0d3ab"
+    },
+    {
+      "event_no": 3,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "Demand; public_input_metadata=12eb1cc57ecd3f05b329d1ade608f44c2c1eadcee50f5b78488a8e7288e66fae; record=998cab20cfc188ff00833023b7ecd8089059ec935212f5f4ce775465707fef0f; evidence=C-EDE-003; legal approval=False",
+      "prev_hash": "f833603e5f24d356231ad75d6f092eb3f57baf6e2a3d9f69208897a0f7d0d3ab",
+      "hash": "3d888a0b60b1c234265b3d579788b239ee40a65949966c55a7efaf54c90ce56a"
+    },
+    {
+      "event_no": 4,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "Supplier; public_input_metadata=05578e95a278d1f2a2399ae5320b59d38dc864de433e8f71d2dcca2379781ccd; record=5bf0279b5a7ff07cb69d1000f34795e66ac35fe37bdbeda3c1e82c67a0f99720; evidence=C-EDE-001; legal approval=False",
+      "prev_hash": "3d888a0b60b1c234265b3d579788b239ee40a65949966c55a7efaf54c90ce56a",
+      "hash": "b304e815d093f57ec936dcb3780dee67d9445bc362d718c3d4d35b5828057457"
+    },
+    {
+      "event_no": 5,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "Logistics; public_input_metadata=c3231068f47030adcb5c8130e5cfd4ce2629b5b12f4d90d613c542003caf33d9; record=b161980b3102efd31317d119793ae647b2efd01d704377c74465cc4e13675675; evidence=C-EDE-003; legal approval=False",
+      "prev_hash": "b304e815d093f57ec936dcb3780dee67d9445bc362d718c3d4d35b5828057457",
+      "hash": "94c4f482bcfb28be0bf3271fc5a0edd1a407d903c343ae7dab7ae2da14a0b752"
+    },
+    {
+      "event_no": 6,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "Regulator; public_input_metadata=104771d69c7696f08e86a1a7b1f49f9d139fadcad68cad7d85cb46b606b255be; record=414f8310ff0c449fe81766c0de5d1149b3628fcd4ac55ea838cae882a33dba0e; evidence=C-EDE-002; legal approval=False",
+      "prev_hash": "94c4f482bcfb28be0bf3271fc5a0edd1a407d903c343ae7dab7ae2da14a0b752",
+      "hash": "4113aac0a9919b62de4f301db0b6931fc105b3d5ad4bc7be008d33d17d4c1104"
+    },
+    {
+      "event_no": 7,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "GlobalPolicy; public_input_metadata=6f3597cab4e41757acd293114568b1c4bcfa2d51af99d3100c9773a772efee61; record=d99f96fe1f8f0573239121c33fc408ae96575b2f54d9b548d69a229aa39583e6; evidence=C-EMA-001; legal approval=False",
+      "prev_hash": "4113aac0a9919b62de4f301db0b6931fc105b3d5ad4bc7be008d33d17d4c1104",
+      "hash": "1aab7559bb3cf89cee46b06ae62efcca81d84419363c4549342ccb850fc9f42d"
+    },
+    {
+      "event_no": 8,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "Equity; public_input_metadata=cfc3811845c21f58c290752d818be947955749fe3c6a6780e242683e30f25e51; record=4dec13ba513b69ae254bd17b9e47ab85577d83e74675f39bc53058ce2a5ddfd6; evidence=C-EDE-003; legal approval=False",
+      "prev_hash": "1aab7559bb3cf89cee46b06ae62efcca81d84419363c4549342ccb850fc9f42d",
+      "hash": "45140c03b21d1d55bb85c1af2767841fcea02ad4c4ed391ae768b70f17df575c"
+    },
+    {
+      "event_no": 9,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "Coordinator; public_input_metadata=6d449b987b47acc459199e02f028698ac03af3e38b1c2334943be7524e4377d9; record=2ea0b80522e8f7412ad2ec5f6bb25feca2cbd817a5534f7270944462a1c18379; evidence=C-UAIINTL-001; legal approval=False",
+      "prev_hash": "45140c03b21d1d55bb85c1af2767841fcea02ad4c4ed391ae768b70f17df575c",
+      "hash": "82218b62c506f272ace39e4b4fa8ffd28b4059bbeeb0e111875fd5c35cedfe3c"
+    },
+    {
+      "event_no": 10,
+      "step": 1,
+      "kind": "COUNCIL_ASSESSMENT",
+      "detail": "Auditor; public_input_metadata=87ab41f76d2454c59bee5ec61c9b06e2c991f1c94ec22c3ed6c05ee9a45d6e67; record=d3b1b2898ebac990cb32796471f6dee24577db2584f9859abedf7ac8a49921f0; evidence=C-UAICYBER-001; legal approval=False",
+      "prev_hash": "82218b62c506f272ace39e4b4fa8ffd28b4059bbeeb0e111875fd5c35cedfe3c",
+      "hash": "da000463902eb5eccdbdc431f2da3de4a5b5b84e318dbfd23bea04756333cb13"
+    }
+  ],
+  "audit_verification": {
+    "valid": true,
+    "entries": 10,
+    "head": "da000463902eb5eccdbdc431f2da3de4a5b5b84e318dbfd23bea04756333cb13"
+  },
+  "limitations": [
+    "LLM outputs are non-executing suggestions only.",
+    "Citation IDs are verified for existence, not semantic entailment.",
+    "Handoffs intentionally omit free-form prose and confidential raw reports.",
+    "Public request digest covers non-secret metadata, not raw private inputs.",
+    "No live LLM calls made unless OPENAI_API_KEY is provided explicitly."
+  ],
+  "artifact_verification": {
+    "valid": true,
+    "checked_roles": 10,
+    "audit_head": "da000463902eb5eccdbdc431f2da3de4a5b5b84e318dbfd23bea04756333cb13",
+    "note": "Integrity only, NOT independent authenticity or proof of truth"
+  }
+}

@@ -1,0 +1,845 @@
+{
+  "description": "Synthetic inventory and urgency weights only. These are NOT clinical, law, or real inventory results.",
+  "method_notes": {
+    "local_only": "no inter-facility coordination",
+    "greedy": "simple capacity-constrained transfers in route order",
+    "optimized": "two-stage integer program: units then institutional urgency weights"
+  },
+  "priority_weighted_reduction_vs_greedy_percent": 10.69,
+  "seed": 2026,
+  "stats": {
+    "local_only": {
+      "scenarios": 30,
+      "mean_unmet_units": 75.37,
+      "mean_improvement_units": 0,
+      "mean_priority_weighted_unmet": 237.63,
+      "operational_valid_rate": 1
+    },
+    "greedy": {
+      "scenarios": 30,
+      "mean_unmet_units": 33.37,
+      "mean_improvement_units": 42,
+      "mean_priority_weighted_unmet": 108.8,
+      "operational_valid_rate": 1
+    },
+    "optimized": {
+      "scenarios": 30,
+      "mean_unmet_units": 33.37,
+      "mean_improvement_units": 42,
+      "mean_priority_weighted_unmet": 97.17,
+      "operational_valid_rate": 1
+    }
+  },
+  "records": [
+    {
+      "scenario": "TEST-001",
+      "method": "local_only",
+      "unmet_units": 91,
+      "priority_weighted_unmet": 455,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-001",
+      "method": "greedy",
+      "unmet_units": 20,
+      "priority_weighted_unmet": 100,
+      "improvement_units": 71,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-001",
+      "method": "optimized",
+      "unmet_units": 20,
+      "priority_weighted_unmet": 100,
+      "improvement_units": 71,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-002",
+      "method": "local_only",
+      "unmet_units": 71,
+      "priority_weighted_unmet": 213,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-002",
+      "method": "greedy",
+      "unmet_units": 30,
+      "priority_weighted_unmet": 90,
+      "improvement_units": 41,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-002",
+      "method": "optimized",
+      "unmet_units": 30,
+      "priority_weighted_unmet": 90,
+      "improvement_units": 41,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-003",
+      "method": "local_only",
+      "unmet_units": 98,
+      "priority_weighted_unmet": 490,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-003",
+      "method": "greedy",
+      "unmet_units": 31,
+      "priority_weighted_unmet": 155,
+      "improvement_units": 67,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-003",
+      "method": "optimized",
+      "unmet_units": 31,
+      "priority_weighted_unmet": 155,
+      "improvement_units": 67,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-004",
+      "method": "local_only",
+      "unmet_units": 36,
+      "priority_weighted_unmet": 36,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-004",
+      "method": "greedy",
+      "unmet_units": 0,
+      "priority_weighted_unmet": 0,
+      "improvement_units": 36,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-004",
+      "method": "optimized",
+      "unmet_units": 0,
+      "priority_weighted_unmet": 0,
+      "improvement_units": 36,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-005",
+      "method": "local_only",
+      "unmet_units": 46,
+      "priority_weighted_unmet": 230,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-005",
+      "method": "greedy",
+      "unmet_units": 6,
+      "priority_weighted_unmet": 30,
+      "improvement_units": 40,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-005",
+      "method": "optimized",
+      "unmet_units": 6,
+      "priority_weighted_unmet": 30,
+      "improvement_units": 40,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-006",
+      "method": "local_only",
+      "unmet_units": 81,
+      "priority_weighted_unmet": 405,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-006",
+      "method": "greedy",
+      "unmet_units": 28,
+      "priority_weighted_unmet": 140,
+      "improvement_units": 53,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-006",
+      "method": "optimized",
+      "unmet_units": 28,
+      "priority_weighted_unmet": 140,
+      "improvement_units": 53,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-007",
+      "method": "local_only",
+      "unmet_units": 63,
+      "priority_weighted_unmet": 315,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-007",
+      "method": "greedy",
+      "unmet_units": 27,
+      "priority_weighted_unmet": 135,
+      "improvement_units": 36,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-007",
+      "method": "optimized",
+      "unmet_units": 27,
+      "priority_weighted_unmet": 135,
+      "improvement_units": 36,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-008",
+      "method": "local_only",
+      "unmet_units": 55,
+      "priority_weighted_unmet": 176,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-008",
+      "method": "greedy",
+      "unmet_units": 10,
+      "priority_weighted_unmet": 30,
+      "improvement_units": 45,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-008",
+      "method": "optimized",
+      "unmet_units": 10,
+      "priority_weighted_unmet": 30,
+      "improvement_units": 45,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-009",
+      "method": "local_only",
+      "unmet_units": 81,
+      "priority_weighted_unmet": 283,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-009",
+      "method": "greedy",
+      "unmet_units": 39,
+      "priority_weighted_unmet": 142,
+      "improvement_units": 42,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-009",
+      "method": "optimized",
+      "unmet_units": 39,
+      "priority_weighted_unmet": 142,
+      "improvement_units": 42,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-010",
+      "method": "local_only",
+      "unmet_units": 50,
+      "priority_weighted_unmet": 50,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-010",
+      "method": "greedy",
+      "unmet_units": 11,
+      "priority_weighted_unmet": 11,
+      "improvement_units": 39,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-010",
+      "method": "optimized",
+      "unmet_units": 11,
+      "priority_weighted_unmet": 11,
+      "improvement_units": 39,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-011",
+      "method": "local_only",
+      "unmet_units": 46,
+      "priority_weighted_unmet": 120,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-011",
+      "method": "greedy",
+      "unmet_units": 9,
+      "priority_weighted_unmet": 36,
+      "improvement_units": 37,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-011",
+      "method": "optimized",
+      "unmet_units": 9,
+      "priority_weighted_unmet": 18,
+      "improvement_units": 37,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-012",
+      "method": "local_only",
+      "unmet_units": 82,
+      "priority_weighted_unmet": 250,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-012",
+      "method": "greedy",
+      "unmet_units": 38,
+      "priority_weighted_unmet": 190,
+      "improvement_units": 44,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-012",
+      "method": "optimized",
+      "unmet_units": 38,
+      "priority_weighted_unmet": 38,
+      "improvement_units": 44,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-013",
+      "method": "local_only",
+      "unmet_units": 112,
+      "priority_weighted_unmet": 206,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-013",
+      "method": "greedy",
+      "unmet_units": 69,
+      "priority_weighted_unmet": 127,
+      "improvement_units": 43,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-013",
+      "method": "optimized",
+      "unmet_units": 69,
+      "priority_weighted_unmet": 127,
+      "improvement_units": 43,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-014",
+      "method": "local_only",
+      "unmet_units": 55,
+      "priority_weighted_unmet": 66,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-014",
+      "method": "greedy",
+      "unmet_units": 21,
+      "priority_weighted_unmet": 32,
+      "improvement_units": 34,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-014",
+      "method": "optimized",
+      "unmet_units": 21,
+      "priority_weighted_unmet": 21,
+      "improvement_units": 34,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-015",
+      "method": "local_only",
+      "unmet_units": 106,
+      "priority_weighted_unmet": 139,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-015",
+      "method": "greedy",
+      "unmet_units": 86,
+      "priority_weighted_unmet": 117,
+      "improvement_units": 20,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-015",
+      "method": "optimized",
+      "unmet_units": 86,
+      "priority_weighted_unmet": 99,
+      "improvement_units": 20,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-016",
+      "method": "local_only",
+      "unmet_units": 94,
+      "priority_weighted_unmet": 242,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-016",
+      "method": "greedy",
+      "unmet_units": 72,
+      "priority_weighted_unmet": 220,
+      "improvement_units": 22,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-016",
+      "method": "optimized",
+      "unmet_units": 72,
+      "priority_weighted_unmet": 132,
+      "improvement_units": 22,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-017",
+      "method": "local_only",
+      "unmet_units": 91,
+      "priority_weighted_unmet": 292,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-017",
+      "method": "greedy",
+      "unmet_units": 38,
+      "priority_weighted_unmet": 114,
+      "improvement_units": 53,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-017",
+      "method": "optimized",
+      "unmet_units": 38,
+      "priority_weighted_unmet": 114,
+      "improvement_units": 53,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-018",
+      "method": "local_only",
+      "unmet_units": 87,
+      "priority_weighted_unmet": 387,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-018",
+      "method": "greedy",
+      "unmet_units": 76,
+      "priority_weighted_unmet": 332,
+      "improvement_units": 11,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-018",
+      "method": "optimized",
+      "unmet_units": 76,
+      "priority_weighted_unmet": 332,
+      "improvement_units": 11,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-019",
+      "method": "local_only",
+      "unmet_units": 67,
+      "priority_weighted_unmet": 134,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-019",
+      "method": "greedy",
+      "unmet_units": 10,
+      "priority_weighted_unmet": 20,
+      "improvement_units": 57,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-019",
+      "method": "optimized",
+      "unmet_units": 10,
+      "priority_weighted_unmet": 20,
+      "improvement_units": 57,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-020",
+      "method": "local_only",
+      "unmet_units": 42,
+      "priority_weighted_unmet": 42,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-020",
+      "method": "greedy",
+      "unmet_units": 0,
+      "priority_weighted_unmet": 0,
+      "improvement_units": 42,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-020",
+      "method": "optimized",
+      "unmet_units": 0,
+      "priority_weighted_unmet": 0,
+      "improvement_units": 42,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-021",
+      "method": "local_only",
+      "unmet_units": 83,
+      "priority_weighted_unmet": 265,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-021",
+      "method": "greedy",
+      "unmet_units": 67,
+      "priority_weighted_unmet": 201,
+      "improvement_units": 16,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-021",
+      "method": "optimized",
+      "unmet_units": 67,
+      "priority_weighted_unmet": 201,
+      "improvement_units": 16,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-022",
+      "method": "local_only",
+      "unmet_units": 85,
+      "priority_weighted_unmet": 395,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-022",
+      "method": "greedy",
+      "unmet_units": 20,
+      "priority_weighted_unmet": 100,
+      "improvement_units": 65,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-022",
+      "method": "optimized",
+      "unmet_units": 20,
+      "priority_weighted_unmet": 100,
+      "improvement_units": 65,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-023",
+      "method": "local_only",
+      "unmet_units": 79,
+      "priority_weighted_unmet": 117,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-023",
+      "method": "greedy",
+      "unmet_units": 36,
+      "priority_weighted_unmet": 36,
+      "improvement_units": 43,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-023",
+      "method": "optimized",
+      "unmet_units": 36,
+      "priority_weighted_unmet": 36,
+      "improvement_units": 43,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-024",
+      "method": "local_only",
+      "unmet_units": 65,
+      "priority_weighted_unmet": 260,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-024",
+      "method": "greedy",
+      "unmet_units": 53,
+      "priority_weighted_unmet": 212,
+      "improvement_units": 12,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-024",
+      "method": "optimized",
+      "unmet_units": 53,
+      "priority_weighted_unmet": 212,
+      "improvement_units": 12,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-025",
+      "method": "local_only",
+      "unmet_units": 108,
+      "priority_weighted_unmet": 392,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-025",
+      "method": "greedy",
+      "unmet_units": 87,
+      "priority_weighted_unmet": 329,
+      "improvement_units": 21,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-025",
+      "method": "optimized",
+      "unmet_units": 87,
+      "priority_weighted_unmet": 287,
+      "improvement_units": 21,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-026",
+      "method": "local_only",
+      "unmet_units": 89,
+      "priority_weighted_unmet": 211,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-026",
+      "method": "greedy",
+      "unmet_units": 49,
+      "priority_weighted_unmet": 131,
+      "improvement_units": 40,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-026",
+      "method": "optimized",
+      "unmet_units": 49,
+      "priority_weighted_unmet": 131,
+      "improvement_units": 40,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-027",
+      "method": "local_only",
+      "unmet_units": 92,
+      "priority_weighted_unmet": 231,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-027",
+      "method": "greedy",
+      "unmet_units": 0,
+      "priority_weighted_unmet": 0,
+      "improvement_units": 92,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-027",
+      "method": "optimized",
+      "unmet_units": 0,
+      "priority_weighted_unmet": 0,
+      "improvement_units": 92,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-028",
+      "method": "local_only",
+      "unmet_units": 64,
+      "priority_weighted_unmet": 152,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-028",
+      "method": "greedy",
+      "unmet_units": 20,
+      "priority_weighted_unmet": 40,
+      "improvement_units": 44,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-028",
+      "method": "optimized",
+      "unmet_units": 20,
+      "priority_weighted_unmet": 20,
+      "improvement_units": 44,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-029",
+      "method": "local_only",
+      "unmet_units": 75,
+      "priority_weighted_unmet": 240,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-029",
+      "method": "greedy",
+      "unmet_units": 23,
+      "priority_weighted_unmet": 69,
+      "improvement_units": 52,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-029",
+      "method": "optimized",
+      "unmet_units": 23,
+      "priority_weighted_unmet": 69,
+      "improvement_units": 52,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-030",
+      "method": "local_only",
+      "unmet_units": 67,
+      "priority_weighted_unmet": 335,
+      "improvement_units": 0,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-030",
+      "method": "greedy",
+      "unmet_units": 25,
+      "priority_weighted_unmet": 125,
+      "improvement_units": 42,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    },
+    {
+      "scenario": "TEST-030",
+      "method": "optimized",
+      "unmet_units": 25,
+      "priority_weighted_unmet": 125,
+      "improvement_units": 42,
+      "operational_valid": true,
+      "legal_approval": "not_granted_by_demo"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-09",
+  "python_regressions": {
+    "passed": 376,
+    "failed": 0,
+    "duration_seconds": 22.86
+  },
+  "javascript_regressions": {
+    "passed_groups": 6,
+    "command": "node tests/test_ui_regressions.cjs"
+  },
+  "javascript_syntax": "passed: node --check web/app.js",
+  "limitations": [
+    "Browser visual verification stopped: Windows tool does not support URL enforcement in the current Yandex browser.",
+    "Local AI transport tested with mocks; no live local model verified.",
+    "No live supplier connected; all scenarios use synthetic data.",
+    "Regulatory review and human authorization remain required."
+  ],
+  "review_council": {
+    "pass": 3,
+    "warning": 3,
+    "fail": 0
+  },
+  "local_submission_preflight": {
+    "passed": true,
+    "pdf_pages": 5,
+    "sources": 14,
+    "claims": 18,
+    "external_submission_ready": false
+  },
+  "running_server_smoke": "Five selected roles returned factual findings through loopback HTTP.",
+  "facility_editor": "Add up to 20 facilities and 60 directed routes; save/submit parity, unique IDs, server calculation and limit rejection verified.",
+  "editor_actions": "Facility deletion confirms connected route removal; last facility protected; moving cards preserves IDs/endpoints; custom IDs preserved on reopen.",
+  "source_inspection": "Allowlisted source titles, HTTPS links, curated statements, jurisdictions and review status exposed; semantic entailment remains unverified.",
+  "clean_extraction_regressions": {
+    "passed": 376,
+    "failed": 0,
+    "duration_seconds": 24.39,
+    "javascript_passed_groups": 6
+  },
+  "source_api_smoke": {
+    "role": "Regulator",
+    "source_details_present": true,
+    "artifact_integrity_valid": true,
+    "legal_clearance": false
+  }
+}

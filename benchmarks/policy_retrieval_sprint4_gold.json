@@ -1,0 +1,16 @@
+{
+  "name": "Sprint-4 narrow EDE controlled-medicine retrieval check",
+  "warning": "Two self-authored cases only; no legal entailment validation",
+  "cases": [
+    {
+      "id": "Q09",
+      "query": "EDE emergency narcotic psychotropic semi controlled transfer hospitals approval",
+      "gold_claim_id": "C-EDE-EMERG-001"
+    },
+    {
+      "id": "Q10",
+      "query": "EDE emergency controlled medicine transfer director letter NOC import permit licence",
+      "gold_claim_id": "C-EDE-EMERG-002"
+    }
+  ]
+}

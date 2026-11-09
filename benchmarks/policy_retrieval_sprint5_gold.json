@@ -1,0 +1,15 @@
+{
+  "scope": "Two editor-authored near-source privacy law queries; NOT independent legal accuracy",
+  "cases": [
+    {
+      "id": "S5-Q1",
+      "query": "Federal Law 2/2019 article 4 article 16 patient information confidentiality health ICT",
+      "gold_claim_id": "C-UAE-HEALTHICT-001"
+    },
+    {
+      "id": "S5-Q2",
+      "query": "Federal Law 2/2019 article 13 cross border health data processing outside UAE",
+      "gold_claim_id": "C-UAE-HEALTHICT-002"
+    }
+  ]
+}

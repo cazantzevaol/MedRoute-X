@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medroute-x-sandbox"
+version = "0.10.0"
+description = "Research-only synthetic medicine continuity sandbox for ITU hackathon"
+requires-python = ">=3.10"
+dependencies = ["scipy>=1.10,<2"]
+
+[tool.setuptools.packages.find]
+include = ["medroute*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

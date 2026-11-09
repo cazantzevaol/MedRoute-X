@@ -1,0 +1,454 @@
+{
+  "label": "SYNTHETIC structural / protocol acceptance - not clinical, legal, or LLM quality",
+  "count": 30,
+  "seed": 2026,
+  "role_runs": 300,
+  "operational_valid_after_disclosure": 30,
+  "independent_checker_blocked_stale_plan": 11,
+  "private_supplier_alert_handoff": 30,
+  "no_autonomous_authorizations": 30,
+  "audit_integrity_valid": 30,
+  "coverage": {
+    "source_count": 13,
+    "claim_count": 17,
+    "category_coverage": {
+      "medical_product_law": {
+        "source_ids": [
+          "EDE-LAW",
+          "UAE-FDL38-2024"
+        ],
+        "linked_claim_count": 3,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      },
+      "emergency_controlled_transfer_service": {
+        "source_ids": [
+          "EDE-EMERGENCY-TRANSFER"
+        ],
+        "linked_claim_count": 2,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      },
+      "pharmaceutical_supply_policy": {
+        "source_ids": [
+          "EDE-MULTI-AGENT"
+        ],
+        "linked_claim_count": 1,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      },
+      "national_ai_governance": {
+        "source_ids": [
+          "UAE-AI-CHARTER",
+          "UAE-AI-INTL"
+        ],
+        "linked_claim_count": 2,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      },
+      "national_ai_security": {
+        "source_ids": [
+          "UAE-AI-CYBER"
+        ],
+        "linked_claim_count": 1,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      },
+      "personal_data_protection": {
+        "source_ids": [
+          "UAE-PDPL-INDEX"
+        ],
+        "linked_claim_count": 1,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      },
+      "health_information_confidentiality": {
+        "source_ids": [
+          "UAE-HEALTHICT-2019"
+        ],
+        "linked_claim_count": 2,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      },
+      "international_essential_medicines": {
+        "source_ids": [
+          "WHO-EML-2025"
+        ],
+        "linked_claim_count": 1,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      },
+      "international_shortage_response": {
+        "source_ids": [
+          "EMA-VSM"
+        ],
+        "linked_claim_count": 1,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      },
+      "itu_rules_and_standard": {
+        "source_ids": [
+          "ITU-CHALLENGE",
+          "ITU-Y3172"
+        ],
+        "linked_claim_count": 3,
+        "full_binding_text_ingested": false,
+        "expert_review_complete": false
+      }
+    },
+    "missing_curated_sources": [],
+    "orphan_claim_sources": [],
+    "jurisdictions": {
+      "UAE": 9,
+      "international": 2,
+      "EU/EEA (comparison only)": 1,
+      "ITU hackathon": 1
+    },
+    "known_gaps": [
+      "Full currently operative binding pharmaceutical provisions not independently reviewed",
+      "Product-specific and institution-specific authorization not established",
+      "Data-sharing applicability and exceptions not independently reviewed",
+      "UAE Health ICT Law 2/2019 Articles 4/13/16 checked in English; Arabic and applicability pending",
+      "Claim entailment requires human annotation; source existence is not proof"
+    ],
+    "status": "metadata_and_page_summary_only_not_full_national_kb"
+  },
+  "cases": [
+    {
+      "case_id": "TEST-001",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-002",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-003",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-004",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-005",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-006",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-007",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-008",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-009",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-010",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-011",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-012",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-013",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-014",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-015",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-016",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-017",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-018",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-019",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-020",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-021",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-022",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-023",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-024",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-025",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-026",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-027",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-028",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-029",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": true,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    },
+    {
+      "case_id": "TEST-030",
+      "events": 2,
+      "roles_executed": 10,
+      "private_capacity_undisclosed_before_formal_event": true,
+      "private_alert_passed_as_typed_handoff": true,
+      "private_event_blocked_by_operational_check": false,
+      "resolved_operationally_after_disclosure": true,
+      "authorization_granted_at_any_step": false,
+      "all_audits_valid": true
+    }
+  ],
+  "limitations": [
+    "Only synthetic events; not safety validation for real pharmacies.",
+    "Offline scripted dialogue is not generative agent performance.",
+    "No external pharmacist or UAE qualified legal review performed.",
+    "Counterfactual documentation and citations are NOT expert-adjudicated."
+  ]
+}

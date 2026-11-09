@@ -1,0 +1,45 @@
+{
+  "scenario_id": "CASE-002",
+  "stages": [
+    {
+      "step": 0,
+      "status": "PENDING_AUTHORIZATION",
+      "supplier_handoff_intent": "INSTITUTIONAL_ASSESSMENT",
+      "policy_P02": "NOT_TRIGGERED",
+      "audit_valid": true,
+      "council_valid": true
+    },
+    {
+      "step": 1,
+      "status": "BLOCKED_OPERATIONAL",
+      "supplier_handoff_intent": "REQUEST_FORMAL_DISCLOSURE",
+      "policy_P02": "REVIEW_REQUIRED",
+      "audit_valid": true,
+      "council_valid": true
+    },
+    {
+      "step": 2,
+      "status": "PENDING_AUTHORIZATION",
+      "supplier_handoff_intent": "INSTITUTIONAL_ASSESSMENT",
+      "policy_P02": "DISCLOSED_FOR_REVIEW",
+      "audit_valid": true,
+      "council_valid": true
+    },
+    {
+      "step": 3,
+      "status": "BLOCKED_OPERATIONAL",
+      "supplier_handoff_intent": "REQUEST_FORMAL_DISCLOSURE",
+      "policy_P02": "REVIEW_REQUIRED",
+      "audit_valid": true,
+      "council_valid": true
+    },
+    {
+      "step": 4,
+      "status": "PENDING_AUTHORIZATION",
+      "supplier_handoff_intent": "INSTITUTIONAL_ASSESSMENT",
+      "policy_P02": "DISCLOSED_FOR_REVIEW",
+      "audit_valid": true,
+      "council_valid": true
+    }
+  ]
+}
